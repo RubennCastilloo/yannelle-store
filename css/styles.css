@@ -1,26 +1,49 @@
 :root {
-    --principalColor: #9553A0;
+    --primaryColor: #E21C7A;
+    --primaryColorRGBA: rgba(226, 28, 122, 1);
+    --secondaryColor: #B31361;
+    --thirdColor: #42687E;
+    --fourthColor: #7E4268;
+    --fifthColor: #7E4259;
+    --sixthColor: #7E424A;
+    --seventhColor: #7E4942;
     --grayLine: #EAEAEA;
+    --colorGrayText: #525141;
 }
 .images {
     height: 400px;
 }
 button.btn-purchase {
     border-radius: 20px;
-    color: var(--principalColor);
-    border: 1px solid var(--principalColor);
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
 }
 button.btn-purchase:hover {
     border-radius: 20px;
-    background-color: var(--principalColor);
-    border: 1px solid var(--principalColor);
+    background-color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+}
+
+button.btn-email {
+    border-radius: 20px;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+}
+button.btn-email:hover {
+    border-radius: 20px;
+    background-color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    color: white;
+}
+button.btn-email:hover > i{
+    color: white;
 }
 .nav-link {
     border-bottom: 2px solid white;
 }
 .nav-link:hover {
-    color: var(--principalColor);
-    border-bottom: 2px solid var(--principalColor);
+    color: var(--primaryColor);
+    border-bottom: 2px solid var(--primaryColor);
     transition: .7s ease-in-out;
 }
 .lineBottom{
@@ -30,9 +53,12 @@ button.dropdown-toggle {
     border-bottom: 2px solid white;
 }
 button.dropdown-toggle:hover {
-    color: var(--principalColor);
-    border-bottom: 2px solid var(--principalColor);
+    color: var(--primaryColor);
+    border-bottom: 2px solid var(--primaryColor);
     transition: .7s ease-in-out;
+}
+.dropdown-item:hover {
+    color: var(--primaryColor);
 }
 .dropdown-toggle::after {
     display:none;
@@ -43,7 +69,7 @@ button.dropdown-toggle:hover {
     width: fit-content;
 }
 .dropdown-menu button:hover {
-    color: var(--principalColor);
+    color: var(--primaryColor);
 }
 .dropdown-menu {
     border: 1px solid var(--grayLine);
@@ -74,3 +100,109 @@ button.dropdown-toggle:hover {
     -webkit-align-items: center;
     align-items: center;
   }
+
+  .selected {
+    color: var(--primaryColor);
+    border-bottom: 2px solid var(--primaryColor);
+    transition: .7s ease-in-out;
+  }
+
+  .card-link {
+      text-decoration: none;
+      color: var(--primaryColor)!important;
+  }
+  .card-link:hover {
+    color: var(--secondaryColor)!important;
+}
+
+.badge {
+    color: var(--primaryColor);
+}
+
+/* Footer */
+
+.footer-page {
+    color: black;
+}
+.footer-page i {
+    color: var(--primaryColor);
+    font-size: 2em;
+}
+.footer-page i:hover {
+    color: var(--secondaryColor);
+    font-size: 2em;
+}
+.footer-page i.fa-envelope {
+    font-size: 1em!important;
+}
+.title-footer {
+    color: var(--primaryColor);
+}
+.copy-footer {
+    color: black;
+}
+.copy-footer p a {
+    color: var(--primaryColor);
+}
+.copy-footer p a:hover {
+    color: var(--secondaryColor);
+    text-decoration: none;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(226, 28, 122, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(226, 28, 122, 0.6);
+  outline: 0 none;
+}
+
+div.card {
+    border-radius: 0;
+    border: none;
+    box-shadow: none!important;
+}
+div.card:hover {
+    border-radius: 0;
+    transition: .4s ease-in-out;
+    border: none;
+    border-color: rgba(226, 28, 122, 0.8)!important;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(226, 28, 122, 0.8)!important;
+}
+
+.dropdown-item:active:focus {
+    color: #ffffff; 
+    background-color: var(--primaryColor);
+  }
+  
+.text-highlighted {
+    color: var(--primaryColor);
+}
+.links {
+    color: black
+    
+}
+.links:hover {
+    color: var(--primaryColor);
+    text-decoration: none;
+}
+.autorLink {
+    color: var(--primaryColor);
+}
+.autorLink:hover {
+    color: var(--secondaryColor);
+    text-decoration: none;
+}
