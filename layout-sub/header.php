@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- User styles -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../../css/styles.css">
 
 
     <title>Yannelle News</title>
@@ -35,7 +35,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav m-auto">
         <li class="nav-item">
-            <a class="nav-link" href="../" id="inicio">INICIO <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../../" id="inicio">INICIO <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <div class="dropdown">
@@ -82,7 +82,7 @@
     var url = location.pathname;
     console.log(url);
 
-    if (url === '/yannelle-store/apple/' || url === '/yannelle-store/amazon/' || url === '/yannelle-store/google/' || url === '/yannelle-store/youtube/' || url === '/yannelle-store/facebook/' || url === '/yannelle-store/code/') {
+    if (url === '/yannelle-store/tech/apple/' || url === '/yannelle-store/tech/amazon/' || url === '/yannelle-store/tech/google/' || url === '/yannelle-store/tech/youtube/' || url === '/yannelle-store/tech/facebook/' || url === '/yannelle-store/tech/code/') {
         document.querySelector('#tech').classList.add('selected');
     }
 </script>

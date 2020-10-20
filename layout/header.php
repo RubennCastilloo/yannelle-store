@@ -43,12 +43,12 @@
               TECH
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <a href="apple/" class="dropdown-item" ><i class="fab fa-apple"></i> Apple</a>
-              <a href="amazon/" class="dropdown-item" ><i class="fab fa-amazon"></i> Amazon</a>
-              <a href="google/" class="dropdown-item" ><i class="fab fa-google"></i> Google</a>
-              <a href="youtube/" class="dropdown-item" ><i class="fab fa-youtube"></i> YouTube</a>
-              <a href="facebook/" class="dropdown-item" ><i class="fab fa-facebook-square"></i> Facebook</a>
-              <a href="code/" class="dropdown-item" ><i class="fas fa-code"></i> Code</a>
+              <a href="tech/apple/" class="dropdown-item" ><i class="fab fa-apple"></i> Apple</a>
+              <a href="tech/amazon/" class="dropdown-item" ><i class="fab fa-amazon"></i> Amazon</a>
+              <a href="tech/google/" class="dropdown-item" ><i class="fab fa-google"></i> Google</a>
+              <a href="tech/youtube/" class="dropdown-item" ><i class="fab fa-youtube"></i> YouTube</a>
+              <a href="tech/facebook/" class="dropdown-item" ><i class="fab fa-facebook-square"></i> Facebook</a>
+              <a href="tech/code/" class="dropdown-item" ><i class="fas fa-code"></i> Code</a>
             </div>
           </div>
         </li>

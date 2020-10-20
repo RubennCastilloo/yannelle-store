@@ -206,3 +206,11 @@ div.card:hover {
     color: var(--secondaryColor);
     text-decoration: none;
 }
+.internal-links {
+    color: var(--primaryColor)
+    
+}
+.internal-links:hover {
+    color: var(--secondaryColor);
+    text-decoration: none;
+}
