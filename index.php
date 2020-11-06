@@ -2,171 +2,129 @@
   include './layout/header.php';
 ?>
 
-<div class="container mt-4 lineBottom">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-6">
-      <h2>We have the best products for you.</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolorem nam, vero placeat tempore assumenda doloribus enim minus, omnis eum maiores quibusdam ut! Temporibus, minima. Numquam sed quam id ipsum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, exercitationem ut reprehenderit enim officia animi culpa repellendus non ab ipsum eligendi, delectus incidunt maxime eos debitis fugiat aliquam dolorem ratione. 
-      </p>
 
-      <button class="btn btn-outline-info btn-purchase">Purchase our products</button>
-    </div>
-    <div class="col-md-6">
-      <img src="images/sales.png" class="w-100"/>
-    </div>
-  </div>
-</div> <!-- first section -->
+  <?php $publicaciones = obtenerPublicacionHeader(0,1); 
+  if($publicaciones->num_rows) { 
+  foreach($publicaciones as $publicacion) { ?>
 
-
-<div class="container mt-5 mb-5 lineBottom" >
-  <div class="text-uppercase text-center mb-5">
-    <small>Ultimas</small>
-    <h3>noticias</h3>
-  </div>
-
-  <div class="row mb-5">
-  <div class="col-md-4">
-    <div class="card mb-4 shadow-sm">
-      <img class="card-img-top" src="images/sales.png" alt="Card image cap">
-      <div class="card-body">
-      <span class="badge badge-light">Apple</span>
-      <a href="#" class="card-link"><h3>Titulo de la nota</h3></a>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <div class="d-flex justify-content-between align-items-center">
+    <div class="col-md-12 p-0">
+        <div class="card bg-inverse">
+          <img class="card-img image-cover" src="./uploads/files/<?php echo $publicacion['portada'] ?>" alt="Card image cap">
+          <div class="card-img-overlay d-flex align-items-end">
+            <div class="row title-back">
+              <div class="col-md-12">
+              <a href="./nota.php?id=<?php echo $publicacion['id'] ?>" class="card-title"><h1><?php echo $publicacion['titulo'] ?></h1></a>
+              </div>
+              <div class="col-md-12 autor-title">
+                Por <a href="" class="autor-link"><?php echo $publicacion['editor'] ?></a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
-  </div>
- 
-  <div class="col-md-4">
-    <div class="card mb-4 shadow-sm">
-      <img class="card-img-top" src="images/sales.png" alt="Card image cap">
-      <div class="card-body">
-      <span class="badge badge-light">Apple</span>
-      <a href="#" class="card-link"><h3>Titulo de la nota</h3></a>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <div class="d-flex justify-content-between align-items-center">
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-md-4">
-    <div class="card mb-4 shadow-sm">
-      <img class="card-img-top" src="images/sales.png" alt="Card image cap">
-      <div class="card-body">
-      <span class="badge badge-light">Apple</span>
-      <a href="#" class="card-link"><h3>Titulo de la nota</h3></a>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <div class="d-flex justify-content-between align-items-center">
-        </div>
-      </div>
-    </div>
-  </div>
+    <?php } 
+    } ?>
 
-  <div class="col-md-4">
-    <div class="card mb-4 shadow-sm">
-      <img class="card-img-top" src="images/sales.png" alt="Card image cap">
-      <div class="card-body">
-      <span class="badge badge-light">Apple</span>
-      <a href="#" class="card-link"><h3>Titulo de la nota</h3></a>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <div class="d-flex justify-content-between align-items-center">
-        </div>
-      </div>
-    </div>
-  </div>
+<?php $publicaciones = obtenerPublicacionHeader(1,1); 
+  if($publicaciones->num_rows) { 
+  foreach($publicaciones as $publicacion) { ?>
 
-  <div class="col-md-4">
-    <div class="card mb-4 shadow-sm">
-      <img class="card-img-top" src="images/sales.png" alt="Card image cap">
-      <div class="card-body">
-      <span class="badge badge-light">Apple</span>
-      <a href="#" class="card-link"><h3>Titulo de la nota</h3></a>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <div class="d-flex justify-content-between align-items-center">
+    <div class="col-md-6 p-0">
+        <div class="card bg-inverse">
+          <img class="card-img image-cover" src="./uploads/files/<?php echo $publicacion['portada'] ?>" alt="Card image cap">
+          <div class="card-img-overlay d-flex align-items-end">
+            <div class="row title-back">
+              <div class="col-md-12">
+              <a href="./nota.php?id=<?php echo $publicacion['id'] ?>" class="card-title"><h1><?php echo $publicacion['titulo'] ?></h1></a>
+              </div>
+              <div class="col-md-12 autor-title">
+                Por <a href="" class="autor-link"><?php echo $publicacion['editor'] ?></a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <div class="col-md-4">
-    <div class="card mb-4 shadow-sm">
-      <img class="card-img-top" src="images/sales.png" alt="Card image cap">
-      <div class="card-body">
-      <span class="badge badge-light">Apple</span>
-      <a href="#" class="card-link"><h3>Titulo de la nota</h3></a>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <div class="d-flex justify-content-between align-items-center">
+<?php } 
+} ?>
+
+<?php $publicaciones = obtenerPublicacionHeader(2,1); 
+  if($publicaciones->num_rows) { 
+  foreach($publicaciones as $publicacion) { ?>
+
+    <div class="col-md-6 p-0">
+        <div class="card bg-inverse">
+          <img class="card-img image-cover" src="./uploads/files/<?php echo $publicacion['portada'] ?>" alt="Card image cap">
+          <div class="card-img-overlay d-flex align-items-end">
+            <div class="row title-back">
+              <div class="col-md-12">
+              <a href="./nota.php?id=<?php echo $publicacion['id'] ?>" class="card-title"><h1><?php echo $publicacion['titulo'] ?></h1></a>
+              </div>
+              <div class="col-md-12 autor-title">
+                Por <a href="" class="autor-link"><?php echo $publicacion['editor'] ?></a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  
+    <?php } 
+} ?>
+
+    
   </div>
 </div>
 
+<!-- notas -->
 
 
-<div class="container mt-5 lineBottom">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="images/tech.png" class="w-100"/>
-    </div> <!-- fin col-md-6 -->
-    <div class="col-md-6">
-      <h2>Build websites with webify. Any niche. In minutes.</h2>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem reiciendis dolore facere? Asperiores, explicabo reiciendis ducimus aliquam error dolores. Ut earum quas, alias autem repudiandae laudantium. Beatae ea inventore earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat illo ducimus inventore sit, iure atque unde nostrum autem voluptatem, enim temporibus nulla nesciunt deserunt id quidem fugiat veniam at corrupti!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsam cumque nemo quis maxime hic provident assumenda odio. Numquam quo molestiae magnam asperiores in nihil beatae commodi facilis et ad!
-      </p>
-    </div>
+<div class="container-fluid mt-3 mb-3">
+  <div class="publicidad text-center align-items-center justify-content-center">
+    <img src="images/ads/ad2.png" class="h-100 w-100" alt="">
   </div>
 </div>
 
-<!-- <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="images/sales.png" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/sales.png" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/sales.png" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/sales.png" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/sales.png" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/sales.png" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/sales.png" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/sales.png" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/sales.png" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/sales.png" alt="">0</div>
+<div class="container-fluid notes mt-5 lineBottom">
+  <h2 class="text-center text-uppercase mb-5">Últimas Noticias</h2>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+            <?php $publicaciones = obtenerUltimasPublicaciones(15); 
+            if($publicaciones->num_rows) { 
+            foreach($publicaciones as $publicacion) { ?>
+                <div class="col-md-4 col-sm-4 mb-4">
+                    <img src="./uploads/files/<?php echo $publicacion['portada'] ?>" alt="" class="h-200 w-100">
+                </div>
+                <div class="col-md-8 col-sm-8 lineBottom mb-4">
+                    <a class="links" href="./nota.php?id=<?php echo $publicacion['id'] ?>"><h3><?php echo $publicacion['titulo'] ?></h3></a>
+                    <p>Por <a class="autorLink" href=""><?php echo $publicacion['editor'] ?></a> | <?php echo $publicacion['fecha'] ?></p>
+                </div>
+
+            <?php } 
+            } else {
+                ?> 
+                  <h4 class="text-danger">No hay contenido para mostrar</h4>
+                <?php
+            } ?>
+
+                <div class="text-center justify-content-center align-items-center mb-4 col-md-12">
+                  <button class="btn btn-outline-info btn-more col-md-12">Mas contenido</button>  
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-3 text-center 	d-sm-none d-md-block">
+            <div class="publicidad text-center align-items-center justify-content-center">
+              <img src="images/ads/ad3.png" class="h-100 w-100" alt="">
+            </div>
+        </div>
     </div>
-    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-    <!-- <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div> -->
+</div>
+
+<!-- fin notas -->
 
   <?php 
     include './layout/footer.php';

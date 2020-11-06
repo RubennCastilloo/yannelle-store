@@ -33,6 +33,10 @@
                                                 <input id="twitter" type="text" class="form-control">
                                             </div>
                                             <div class="form-group col-md-6">
+                                                <label for="link-twitter" class="control-label mb-1">Link de Twitter</label>
+                                                <input id="link-twitter" type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
                                                 <label for="password" class="control-label mb-1">Constraseña</label>
                                                 <input id="password" type="password" class="form-control">
                                             </div>
@@ -57,7 +61,7 @@
                             
                             <div class="col-lg-12">
                                 <div class="table-responsive table--no-card m-b-30">
-                                    <table class="table table-borderless table-striped table-earning">
+                                    <table class="table table-borderless table-striped table-earning" id="listado-usuarios">
                                         <thead>
                                             <tr>
                                                 <th>Nombre</th>
@@ -66,54 +70,28 @@
                                                 <th>Acciones</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Ruben</td>
-                                                <td>Castillo</td>
-                                                <td>correo@correo.com</td>
+                                        <tbody id="form-users">
+                                        <?php $usuarios = obtenerUsuarios(); 
+                                        if($usuarios->num_rows) { 
+                                            
+                                            foreach($usuarios as $usuario) { ?>
+                                            <tr>  
+                                                <td><?php echo $usuario['nombre'] ?></td>
+                                                <td><?php echo $usuario['apellido'] ?></td>
+                                                <td><?php echo $usuario['correo'] ?></td>
                                                 <td>
-                                                    <a href="edit-user.php" id="add-user" class="btn btn-sm btn-info">
+                                                    <a href="edit-user.php?id=<?php echo $usuario['id'] ?>" id="add-user" class="btn btn-sm btn-info">
                                                         <i class="fa fa-edit fa-lg"></i>&nbsp;
                                                         <span>Editar</span>
                                                     </a>
-                                                    <button id="add-user" class="btn btn-sm btn-danger">
+                                                    <button id="add-user" class="btn btn-sm btn-danger delete-user" data-id="<?php echo $usuario['id'] ?>">
                                                         <i class="fa fa-trash fa-lg"></i>&nbsp;
                                                         <span>Borrar</span>
                                                     </button>
                                                 </td>
                                             </tr>
-
-                                            <tr>
-                                                <td>Ruben</td>
-                                                <td>Castillo</td>
-                                                <td>correo@correo.com</td>
-                                                <td>
-                                                    <a href="edit-user.php" id="add-user" class="btn btn-sm btn-info">
-                                                        <i class="fa fa-edit fa-lg"></i>&nbsp;
-                                                        <span>Editar</span>
-                                                    </a>
-                                                    <button id="add-user" class="btn btn-sm btn-danger">
-                                                        <i class="fa fa-trash fa-lg"></i>&nbsp;
-                                                        <span>Borrar</span>
-                                                    </button>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>Ruben</td>
-                                                <td>Castillo</td>
-                                                <td>correo@correo.com</td>
-                                                <td>
-                                                    <a href="edit-user.php" id="add-user" class="btn btn-sm btn-info">
-                                                        <i class="fa fa-edit fa-lg"></i>&nbsp;
-                                                        <span>Editar</span>
-                                                    </a>
-                                                    <button id="add-user" class="btn btn-sm btn-danger">
-                                                        <i class="fa fa-trash fa-lg"></i>&nbsp;
-                                                        <span>Borrar</span>
-                                                    </button>
-                                                </td>
-                                            </tr>
+                                            <?php }
+                                        } ?>
 
                                         </tbody>
                                     </table>

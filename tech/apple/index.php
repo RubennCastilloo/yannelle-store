@@ -15,7 +15,7 @@
                             <img src="../../images/notes/netflix.jpg" alt="" class="h-200 w-100">
                         </div>
                         <div class="col-md-8 col-sm-8 lineBottom mb-4">
-                            <a class="links" href="./nota.php"><h3>Netflix is testing a ‘Shuffle’ button, because you’re tired of picking what to watch</h3></a>
+                            <a class="links" href="../../nota.php"><h3>Netflix is testing a ‘Shuffle’ button, because you’re tired of picking what to watch</h3></a>
                             <p>Por <a class="autorLink" href="">Ruben Castillo</a> | Agosto 21 | 12 Comentarios</p>
                         </div>
 

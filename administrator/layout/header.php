@@ -1,3 +1,8 @@
+<?php 
+    session_start();
+    include './php/session.php';
+    include 'php/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +11,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
     <title>Dashboard</title>
@@ -32,7 +35,14 @@
 
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="css/trix.css">
+    <link rel="stylesheet" type="text/css" href="css/trix.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script type="text/javascript" src="js/trix.js"></script>
+
+    <!-- Include the CSS that styles the charts. -->
+    <link rel="stylesheet" href="css/chartjs-visualizations.css">
+   
 
 </head>
 
@@ -177,6 +187,14 @@
                             <a href="../administrator/publications.php">
                                 <i class="fas fa-file-text"></i>Publicaciones</a>
                         </li>
+                        <li class="has-sub ads">
+                            <a href="../administrator/ads.php">
+                            <i class="fas fa-tablet"></i>Publicidad</a>
+                        </li>
+                        <li class="has-sub store">
+                            <a href="../administrator/store.php">
+                                <i class="fas fa-shopping-cart"></i>Tienda</a>
+                        </li>
                         <li class="has-sub list">
                         <a class="js-arrow" href="#">
                             <i class="fas fa-list-ul"></i>Listas</a>
@@ -186,6 +204,9 @@
                             </li>
                             <li>
                             <a href="publications-list.php">Publicaciones</a>
+                            </li>
+                            <li>
+                            <a href="lista-archivos.php">Archivos</a>
                             </li>
                         </ul>
                         </li>
@@ -206,42 +227,38 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="./uploads/perfil/ruben1.jpg" alt="Ruben Castillo" />
+                                            <img src="./uploads/profile/<?php echo $_SESSION['perfil']; ?>" alt="<?php echo $_SESSION['nombre']; ?>" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">Ruben Castillo</a>
+                                            <a class="js-acc-btn" href="#"><?php echo $_SESSION['nombre'] . " " . $_SESSION['apellido'] ?></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="./uploads/perfil/ruben1.jpg" alt="Ruben Castillo" />
+                                                        <img src="./uploads/profile/<?php echo $_SESSION['perfil']; ?>" alt="<?php echo $_SESSION['nombre']; ?>" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">Ruben Castillo</a>
+                                                        <a href="#"><?php echo $_SESSION['nombre'] . " " . $_SESSION['apellido']; ?></a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email"><?php echo $_SESSION['correo']; ?></span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                    <a href="./edit-user.php?id=<?php echo $_SESSION['id']?>">
+                                                        <i class="zmdi zmdi-account"></i>Cuenta</a>
                                                 </div>
                                                 <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
-                                                </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                                    <a href="./publications.php">
+                                                        <i class="zmdi zmdi-assignment"></i>Publicar</a>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                <a href="./login/?cerrar_sesion=true">
+                                                    <i class="zmdi zmdi-power"></i>Salir</a>
                                             </div>
                                         </div>
                                     </div>
@@ -255,6 +272,9 @@
 
             <script>
                 var url = location.pathname;
+                if(url === "/yannelle-store/administrator/" || url === "/yannelle-store/administrator/index.php") {
+                    document.querySelector(".dashboard").classList.add("active");
+                }
                 if(url === "/yannelle-store/administrator/users.php" || url === "/yannelle-store/administrator/edit-user.php") {
                     document.querySelector(".users").classList.add("active");
                 }
@@ -263,5 +283,8 @@
                 }
                 if(url === "/yannelle-store/administrator/users-list.php" || url === "/yannelle-store/administrator/publications-list.php") {
                     document.querySelector(".list").classList.add("active");
+                }
+                if(url === "/yannelle-store/administrator/ads.php" || url === "/yannelle-store/administrator/ads-list.php") {
+                    document.querySelector(".ads").classList.add("active");
                 }
             </script>

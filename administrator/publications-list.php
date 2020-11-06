@@ -1,5 +1,5 @@
-<?php 
-    include 'layout/header.php';
+<?php
+include 'layout/header.php';
 ?>
 
 <div class="main-content">
@@ -17,47 +17,27 @@
                                     <th>Actions</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="publications-table">
+                            <?php $publicaciones = obtenerPublicaciones(); 
+                            if($publicaciones->num_rows) { 
+                            foreach($publicaciones as $publicacion) { ?>
                                 <tr>
-                                    <td>Apple says Epic is ‘putting...</td>
-                                    <td>Ruben Castillo</td>
-                                    <td>21 Agosto 2020 12:38 PM</td>
+                                    <td><?php echo $publicacion['titulo'] ?></td>
+                                    <td><?php echo $publicacion['editor'] ?></td>
+                                    <td><?php echo $publicacion['fecha'] ?></td>
                                     <td>
-                                        <button id="add-user" class="btn btn-sm btn-info">
+                                        <a href="edit-publication.php?id=<?php echo $publicacion['id'] ?>" class="btn btn-sm btn-info">
                                             <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button id="add-user" class="btn btn-sm btn-danger">
+                                        </a>
+                                        <input type="hidden" name="" value="<?php echo $publicacion['portada'] ?>" id="file-name">
+                                        <button class="btn btn-sm btn-danger delete-publication" data-id="<?php echo $publicacion['id'] ?>">
                                             <i class="fa fa-trash"></i>
                                         </button>
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td>Apple says Epic is ‘putting...</td>
-                                    <td>Ruben Castillo</td>
-                                    <td>21 Agosto 2020 12:38 PM</td>
-                                    <td>
-                                        <button id="add-user" class="btn btn-sm btn-info">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button id="add-user" class="btn btn-sm btn-danger">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Apple says Epic is ‘putting...</td>
-                                    <td>Ruben Castillo</td>
-                                    <td>21 Agosto 2020 12:38 PM</td>
-                                    <td>
-                                        <button id="add-user" class="btn btn-sm btn-info">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button id="add-user" class="btn btn-sm btn-danger">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+                                <?php }
+                            } ?>
                                 
                             </tbody>
                         </table>
@@ -66,10 +46,9 @@
             </div>
         </div>
     </div>
-
 </div>
 
 
-<?php 
-    include 'layout/footer.php';
+<?php
+include 'layout/footer.php';
 ?>

@@ -1,5 +1,14 @@
 <?php 
     include 'layout/header.php';
+
+    $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
+
+     if(!$id) {
+          die('No es válido');
+     }
+
+     $resultado = obtenerUsuario($id);
+     $usuario = $resultado->fetch_assoc();
 ?>
 
 <div class="main-content">
@@ -18,19 +27,19 @@
                                             <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="name" class="control-label mb-1">Nombre</label>
-                                                <input id="name" name="name" type="text" class="form-control">
+                                                <input id="name" name="name" type="text" class="form-control" value="<?php echo ($usuario['nombre']) ? $usuario['nombre'] : '';  ?>">
                                             </div>
                                             <div class="form-group has-success col-md-6">
                                                 <label for="last-name" class="control-label mb-1">Apellido</label>
-                                                <input id="last-name" type="text" class="form-control">
+                                                <input id="last-name" type="text" class="form-control" value="<?php echo ($usuario['apellido']) ? $usuario['apellido'] : '';  ?>">
                                             </div>
                                             <div class="form-group has-success col-md-6">
                                                 <label for="mail" class="control-label mb-1">Correo</label>
-                                                <input id="mail" type="text" class="form-control">
+                                                <input id="mail" type="text" class="form-control" value="<?php echo ($usuario['correo']) ? $usuario['correo'] : '';  ?>">
                                             </div>
                                             <div class="form-group has-success col-md-6">
                                                 <label for="twitter" class="control-label mb-1">Twitter</label>
-                                                <input id="twitter" type="text" class="form-control">
+                                                <input id="twitter" type="text" class="form-control" value="<?php echo ($usuario['twitter']) ? $usuario['twitter'] : '';  ?>">
                                             </div>
                                             <div class="form-group has-success col-md-6">
                                                 <label for="password" class="control-label mb-1">Constraseña</label>
@@ -40,18 +49,10 @@
                                                 <label for="confirm-password" class="control-label mb-1">Confirmar Contraseña</label>
                                                 <input id="confirm-password" type="password" class="form-control">
                                             </div>
-                                            <div class="form-group col-md-12 mb-4 text-center">
-                                                <label class=" form-control-label">Actual foto de perfil</label>
-                                                <div class="col-12 col-md-12">
-                                                    <img class="text-center align-items-center justify-content-center" src="./uploads/perfil/ruben1.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-md-12 mb-4">
-                                                <label for="file-input" class=" form-control-label">Cambiar Foto de Perfil</label>
-                                                <input type="file" id="perfil-picture" class="form-control-file ">
-                                            </div>
+                                            
                                             </div> <!-- fin row interno-->
-                                                <button id="add-user" type="submit" class="btn btn-lg btn-info btn-block">
+                                                <input type="hidden" name="" id="id-user" value="<?php echo $id ?>">
+                                                <button id="edit-user" type="submit" class="btn btn-lg btn-info btn-block">
                                                     <i class="fa fa-user fa-lg"></i>&nbsp;
                                                     <span>Editar Usuario</span>
                                                 </button>

@@ -49,6 +49,7 @@
               <a href="../youtube/" class="dropdown-item" ><i class="fab fa-youtube"></i> YouTube</a>
               <a href="../facebook/" class="dropdown-item" ><i class="fab fa-facebook-square"></i> Facebook</a>
               <a href="../code/" class="dropdown-item" ><i class="fas fa-code"></i> Code</a>
+              <a href="../more/" class="dropdown-item" ><i class="fas fa-plus"></i> Más</a>
             </div>
           </div>
         </li>
@@ -86,3 +87,9 @@
         document.querySelector('#tech').classList.add('selected');
     }
 </script>
+
+<div class="container-fluid mt-3 mb-3">
+  <div class="publicidad text-center align-items-center justify-content-center">
+    <img src="../../images/ads/ad2.png" class="h-100 w-100" alt="">
+  </div>
+</div>

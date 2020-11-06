@@ -37,8 +37,10 @@
                         
             </div>
         </div>
-        <div class="col-md-3 text-center">
-            Publicidad
+        <div class="col-md-3 text-center 	d-sm-none d-md-block">
+            <div class="publicidad text-center align-items-center justify-content-center">
+              <img src="../../images/ads/ad3.png" class="h-100 w-100" alt="">
+            </div>
         </div>
     </div>
 </div>

@@ -25,34 +25,62 @@
                                                     <input id="subtitulo" type="text" class="form-control">
                                                 </div>
                                                 <div class="form-group has-success col-md-12 mb-4">
-                                                    <label for="file-input" class=" form-control-label">Portada</label>
-                                                    <input type="file" id="file-input" class="form-control-file">
+                                                    <label for="cover-input" class=" form-control-label">Portada</label>
+                                                    <input type="file" id="cover-input" class="form-control-file">
                                                 </div>
-                                                <div class="form-group has-success col-md-12">
-                                                    <input id="trix-editor" type="hidden" />
-                                                    <trix-editor input="trix-editor" id="contenido" style="height: 600px"></trix-editor>
-                                                </div>
-                                                <div class="form-group has-success col-md-12">
-                                                    <label for="categoria" class=" form-control-label">Categoría</label>
-                                                        <select id="categoria" class="form-control">
-                                                        <option value="">Seleccionar</option>
-                                                        <option value="1">Tech</option>
-                                                        <option value="2">Entretenimiento</option>
-                                                        </select>
-                                                </div>
-                                                <div class="form-group has-success col-md-12">
-                                                    <label for="subcategoria" class=" form-control-label">Subcategoría</label>
-                                                        <select id="subcategoria" class="form-control">
-                                                        <option value="">No hay valores</option>
-                                                        </select>
-                                                </div>
-                                                <div class="form-group has-success col-md-12">
-                                                    <button id="new-publication" type="submit" class="btn btn-lg btn-info btn-block">
-                                                        <i class="fa fa-check fa-lg"></i>&nbsp;
-                                                        <span>Publicar</span>
+                                                <div class="form-group has-success col-md-12 mb-4 subir-archivos">
+                                                    <label for="link-input" class=" form-control-label">Subir Archivos (Obtener link)</label>
+                                                    <input type="file" id="link-input" class="form-control-file">
+
+                                                    <button id="upload-files" type="submit" class="btn btn-sm btn-success btn-block p-2 mt-3">
+                                                        <i class="fa fa-upload fa-lg"></i>&nbsp;
+                                                        <span class="fa-lg">Subir</span>
                                                     </button>
+
+                                                <div class="archivos-subidos mt-3">
+                                                    <div class="table-responsive table--no-card m-b-30 text-center">
+                                                        <table class="table table-borderless table-striped table-earning listado-archivos">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>URL</th>
+                                                                    <th>Copiar</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="files-table">
+                                                                
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
-                                               
+
+                                            </div>
+                                            <div class="form-group has-success col-md-12">
+                                                <input id="trix-editor" type="hidden" name="content"/>
+                                                <trix-editor input="trix-editor" class="trix-content" id="contenido" autofocus contenteditable role="textbox"></trix-editor>
+                                            </div>
+                                            <div class="form-group has-success col-md-12">
+                                                <label for="categoria" class=" form-control-label">Categoría</label>
+                                                    <select id="categoria" class="form-control">
+                                                    <option value="">Seleccionar</option>
+                                                    <option value="tech">Tech</option>
+                                                    <option value="entretenimiento">Entretenimiento</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group has-success col-md-12">
+                                                <label for="subcategoria" class=" form-control-label">Subcategoría</label>
+                                                    <select id="subcategoria" class="form-control">
+                                                    <option value="">No hay valores</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group has-success col-md-12">
+                                                <input type="hidden" name="" value="<?php echo $_SESSION['nombre'] . " " . $_SESSION['apellido'] ?>" id="editor">
+                                                <input type="hidden" name="" value="<?php $_SESSION['twitter']?>" id="twitter">
+                                                <button id="new-publication" type="submit" class="btn btn-lg btn-info btn-block">
+                                                    <i class="fa fa-check fa-lg"></i>&nbsp;
+                                                    <span>Publicar</span>
+                                                </button>
+                                            </div>
+                                            
                                             </div>
                                             
                                         </form>
@@ -61,8 +89,8 @@
                             </div>  
                             
                             <div class="col-lg-12">
-                                <div class="table-responsive table--no-card m-b-30">
-                                    <table class="table table-borderless table-striped table-earning">
+                                <div class="table-responsive table--no-card m-b-30 text-center">
+                                    <table class="table table-borderless table-striped table-earning listado-publicaciones">
                                         <thead>
                                             <tr>
                                                 <th>Titulo</th>
@@ -71,57 +99,39 @@
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="publications-table">
+                                        <?php $publicaciones = obtenerPublicaciones(); 
+                                        if($publicaciones->num_rows) { 
+                                        foreach($publicaciones as $publicacion) { ?>
                                             <tr>
-                                                <td>Apple says Epic is ‘putting...</td>
-                                                <td>Ruben Castillo</td>
-                                                <td>21 Agosto 2020 12:38 PM</td>
+                                                <td><?php echo $publicacion['titulo'] ?></td>
+                                                <td><?php echo $publicacion['editor'] ?></td>
+                                                <td><?php echo $publicacion['fecha'] ?></td>
                                                 <td>
-                                                    <a href="edit-publication.php" id="add-user" class="btn btn-sm btn-info">
+                                                    <a href="edit-publication.php?id=<?php echo $publicacion['id'] ?>" class="btn btn-sm btn-info">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
-                                                    <button id="add-user" class="btn btn-sm btn-danger">
+                                                    <input type="hidden" name="" value="<?php echo $publicacion['portada'] ?>" id="file-name">
+                                                    <button class="btn btn-sm btn-danger delete-publication" data-id="<?php echo $publicacion['id'] ?>">
                                                         <i class="fa fa-trash"></i>
                                                     </button>
                                                 </td>
                                             </tr>
 
-                                            <tr>
-                                                <td>Apple says Epic is ‘putting...</td>
-                                                <td>Ruben Castillo</td>
-                                                <td>21 Agosto 2020 12:38 PM</td>
-                                                <td>
-                                                    <a href="edit-publication.php" id="add-user" class="btn btn-sm btn-info">
-                                                        <i class="fa fa-edit"></i>
-                                                    </a>
-                                                    <button id="add-user" class="btn btn-sm btn-danger">
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Apple says Epic is ‘putting...</td>
-                                                <td>Ruben Castillo</td>
-                                                <td>21 Agosto 2020 12:38 PM</td>
-                                                <td>
-                                                    <a href="edit-publication.php" id="add-user" class="btn btn-sm btn-info">
-                                                        <i class="fa fa-edit"></i>
-                                                    </a>
-                                                    <button id="add-user" class="btn btn-sm btn-danger">
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
+                                            <?php }
+                                        } ?>
                                             
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
+
             </div>
         </div>
     </div>
 
 </div>
+
 
 
 <?php 
