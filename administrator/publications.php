@@ -64,6 +64,7 @@
                                                     <option value="">Seleccionar</option>
                                                     <option value="tech">Tech</option>
                                                     <option value="entretenimiento">Entretenimiento</option>
+                                                    <option value="ciencia">Ciencia</option>
                                                     </select>
                                             </div>
                                             <div class="form-group has-success col-md-12">

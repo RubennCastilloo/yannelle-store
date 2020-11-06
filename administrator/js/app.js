@@ -50,6 +50,7 @@ function cambiarSubcategoria(){
         <option value="youtube">Youtube</option>
         <option value="facebook">Facebook</option>
         <option value="code">Code</option>
+        <option value="mas-techa">Más Tech</option>
         `;
     }
     if (selectedOption.value === "entretenimiento") {
@@ -62,6 +63,18 @@ function cambiarSubcategoria(){
         <option value="libros">Libros</option>
         <option value="musica">Música</option>
         <option value="podcast">Podcast</option>
+        <option value="mas-entretenimiento">Más Entretenimiento</option>
+        `;
+    }
+    if (selectedOption.value === "ciencia") {
+      // console.log('Selecciono entretenimiento');
+      subcategoria.innerHTML = `
+        <option value="">Seleccionar</option>
+        <option value="espacio">Espacio</option>
+        <option value="salud">Salud</option>
+        <option value="energia">Energía</option>
+        <option value="ambiente">Ambiente</option>
+        <option value="mas-ciencia">Más Ciencia</option>
         `;
     }
     if (selectedOption.value === "") {

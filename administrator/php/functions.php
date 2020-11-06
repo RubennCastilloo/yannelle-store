@@ -30,6 +30,16 @@ function obtenerPublicaciones() {
     }
 } 
 
+function obtenerAdsAdmin() {
+    include 'conn.php';
+    try {
+        return $conn->query("SELECT * FROM ads");
+    } catch (Exception $e) {
+         echo "Error!" . $e->getMessage() . "<br>";
+         return false;
+    }
+} 
+
 function obtenerUsuario($id) {
     include 'conn.php';
     try{
@@ -55,6 +65,18 @@ function obtenerPublicacionHeader($primerDato, $segundoDato) {
     try{
          return $conn->query("SELECT * FROM publicaciones
          ORDER BY id DESC
+         LIMIT $primerDato, $segundoDato");
+    } catch(Exception $e) {
+         echo "Error!!" . $e->getMessage() . "<br>";
+         return false;
+    }
+}
+
+function obtenerAds($ubicacion, $primerDato, $segundoDato) {
+    include 'conn.php';
+    try{
+         return $conn->query("SELECT * FROM ads
+         WHERE ubicacion = $ubicacion ORDER BY id DESC
          LIMIT $primerDato, $segundoDato");
     } catch(Exception $e) {
          echo "Error!!" . $e->getMessage() . "<br>";

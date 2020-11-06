@@ -52,7 +52,7 @@
               <a href="tech/youtube/" class="dropdown-item" ><i class="fab fa-youtube"></i> YouTube</a>
               <a href="tech/facebook/" class="dropdown-item" ><i class="fab fa-facebook-square"></i> Facebook</a>
               <a href="tech/code/" class="dropdown-item" ><i class="fas fa-code"></i> Code</a>
-              <a href="tech/more/" class="dropdown-item" ><i class="fas fa-plus"></i> Más</a>
+              <a href="tech/more/" class="dropdown-item" ><i class="fas fa-microchip"></i> Todo Tech</a>
             </div>
           </div>
         </li>
@@ -69,6 +69,22 @@
               <button class="dropdown-item" type="button"><i class="fas fa-book"></i> Libros</button>
               <button class="dropdown-item" type="button"><i class="fas fa-music"></i> Musica</button>
               <button class="dropdown-item" type="button"><i class="fas fa-podcast"></i> Podcast</button>
+              <a href="entretainment/more/" class="dropdown-item" ><i class="fas fa-laugh-beam"></i> Todo Entretenimiento</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+              CIENCIA 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button"><i class="fas fa-meteor"></i> Espacio</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-heartbeat"></i> Salud</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-plug"></i> Energía</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-leaf"></i> Ambiente</button>
+              <a href="science/more/" class="dropdown-item" ><i class="fas fa-atom"></i> Todo Ciencia</a>
             </div>
           </div>
         </li>
@@ -92,7 +108,20 @@
 </script>
 
 <div class="container-fluid mt-3 mb-3">
+<?php $publicaciones = obtenerAds('1',0,1); 
+  if($publicaciones->num_rows) { 
+  foreach($publicaciones as $publicacion) { ?>
   <div class="publicidad text-center align-items-center justify-content-center">
-    <img src="images/ads/ad2.png" class="h-100 w-100" alt="">
+    <a href="<?php echo $publicacion['link'] ?>" target="_blank">
+      <img src="./uploads/publ/<?php echo $publicacion['imagen'] ?>" class="h-100 w-100" alt="">
+    </a>
   </div>
+  <?php } 
+    } else {
+      ?> 
+        <div class="publicidad text-center align-items-center justify-content-center">
+          Publicidad
+        </div>
+      <?php
+    } ?>
 </div>

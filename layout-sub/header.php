@@ -1,3 +1,6 @@
+<?php 
+  include '../../administrator/php/functions.php';
+?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -88,8 +91,19 @@
     }
 </script>
 
-<div class="container-fluid mt-3 mb-3">
-  <div class="publicidad text-center align-items-center justify-content-center">
-    <img src="../../images/ads/ad2.png" class="h-100 w-100" alt="">
+<?php $publicaciones = obtenerAds('6',0,1); 
+  if($publicaciones->num_rows) { 
+  foreach($publicaciones as $publicacion) { ?>
+  <div class="publicidad text-center align-items-center justify-content-center mt-3 mb-3">
+    <a href="<?php echo $publicacion['link'] ?>" target="_blank">
+      <img src="../../uploads/publ/<?php echo $publicacion['imagen'] ?>" class="h-100 w-100" alt="">
+    </a>
   </div>
-</div>
+  <?php } 
+    } else {
+      ?> 
+        <div class="publicidad text-center align-items-center justify-content-center mt-3 mb-3">
+          Publicidad
+        </div>
+      <?php
+    } ?>

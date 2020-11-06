@@ -39,9 +39,24 @@
                         
             </div>
         </div>
-        <div class="col-md-3 text-center">
-            Publicidad
+        <?php $publicaciones = obtenerAds('7',0,1); 
+        if($publicaciones->num_rows) { 
+        foreach($publicaciones as $publicacion) { ?>
+        <div class="col-md-3 text-center d-sm-none d-md-block">
+            <div class="publicidad text-center align-items-center justify-content-center">
+            <a href="<?php echo $publicacion['link'] ?>" target="_blank">
+              <img src="../../uploads/publ/<?php echo $publicacion['imagen'] ?>" class="h-100 w-100" alt="">
+            </a>
+            </div>
         </div>
+        <?php } 
+    } else {
+      ?> 
+        <div class="publicidad text-center align-items-center justify-content-center">
+          Publicidad
+        </div>
+      <?php
+    } ?>
     </div>
 </div>
 
