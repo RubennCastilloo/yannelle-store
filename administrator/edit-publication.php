@@ -44,8 +44,8 @@
                                                     <input type="file" id="update-cover" class="form-control-file">
                                                 </div>
                                                 <div class="form-group has-success col-md-12">
-                                                    <input id="trix-editor" type="hidden" value="<?php echo ($publicacion['contenido']) ? $publicacion['contenido'] : '';  ?>"/>
-                                                    <trix-editor input="trix-editor" id="contenido" ></trix-editor>
+                                                    <input id="trix-editor" type="hidden" value=""/>
+                                                    <trix-editor input="trix-editor" id="contenido" ><?php echo ($publicacion['contenido']) ? $publicacion['contenido'] : '';  ?></trix-editor>
                                                 </div>
                                                 <div class="form-group has-success col-md-12">
                                                 <label for="categoria" class=" form-control-label">Categoría</label>
@@ -53,6 +53,7 @@
                                                     <option value="">Seleccionar</option>
                                                     <option value="tech" <?php if($publicacion['categoria'] == 'tech') { ?> selected="selected"<?php } ?>>Tech</option>
                                                     <option value="entretenimiento" <?php if($publicacion['categoria'] == 'entretenimiento') { ?> selected="selected"<?php } ?>>Entretenimiento</option>
+                                                    <option value="ciencia" <?php if($publicacion['categoria'] == 'ciencia') { ?> selected="selected"<?php } ?>>Ciencia</option>
                                                     </select>
                                             </div>
                                             <div class="form-group has-success col-md-12">

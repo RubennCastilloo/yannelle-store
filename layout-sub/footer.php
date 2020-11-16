@@ -1,5 +1,5 @@
 <footer class="footer-page mt-5">
-  <div class="container pt-3">
+  <div class="container-fluid pt-3">
           <div class="row text-center">
               <div class="col-lg-4 col-12 pb-2">
                 <div class="col text-center text-uppercase">

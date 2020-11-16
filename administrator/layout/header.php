@@ -191,6 +191,10 @@
                             <a href="../administrator/ads.php">
                             <i class="fas fa-tablet"></i>Publicidad</a>
                         </li>
+                        <li class="has-sub description">
+                            <a href="../administrator/descriptions.php">
+                            <i class="fas fa-archive"></i>Descripciones</a>
+                        </li>
                         <li class="has-sub store">
                             <a href="../administrator/store.php">
                                 <i class="fas fa-shopping-cart"></i>Tienda</a>
@@ -286,5 +290,8 @@
                 }
                 if(url === "/yannelle-store/administrator/ads.php" || url === "/yannelle-store/administrator/ads-list.php") {
                     document.querySelector(".ads").classList.add("active");
+                }
+                if(url === "/yannelle-store/administrator/descriptions.php" || url === "/yannelle-store/administrator/edit-description.php") {
+                    document.querySelector(".description").classList.add("active");
                 }
             </script>

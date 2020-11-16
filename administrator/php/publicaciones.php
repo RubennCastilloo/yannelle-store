@@ -7,6 +7,7 @@ $categoria = filter_var($_POST['categoria'], FILTER_SANITIZE_STRING);
 $subcategoria = filter_var($_POST['subcategoria'], FILTER_SANITIZE_STRING);
 $editor = filter_var($_POST['editor'], FILTER_SANITIZE_STRING);
 $twitter = filter_var($_POST['twitter'], FILTER_SANITIZE_STRING);
+$link_twitter = filter_var($_POST['linkTwitter'], FILTER_SANITIZE_STRING);
 $cover = $_FILES['coverUpload'];
 
 date_default_timezone_set('America/Chihuahua');
@@ -62,8 +63,8 @@ $stmt->fetch();
             }
             
         try {
-            $stmt = $conn->prepare("INSERT INTO publicaciones (titulo, subtitulo, portada, contenido, categoria, subcategoria, fecha, editor, twitter) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param('sssssssss', $titulo, $subtitulo, $imagen_url, $contenido, $categoria, $subcategoria, $hoy, $editor, $twitter);
+            $stmt = $conn->prepare("INSERT INTO publicaciones (titulo, subtitulo, portada, contenido, categoria, subcategoria, fecha, editor, twitter, link_twitter) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param('ssssssssss', $titulo, $subtitulo, $imagen_url, $contenido, $categoria, $subcategoria, $hoy, $editor, $twitter, $link_twitter);
             $stmt->execute();
             if($stmt->affected_rows > 0){
                 $response = array(

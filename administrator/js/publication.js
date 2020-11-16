@@ -314,7 +314,8 @@ function publishContent(e) {
         subcategoria = document.querySelector('#subcategoria').value.trim(),
         editor = document.querySelector('#editor').value.trim(),
         twitter = document.querySelector('#twitter').value.trim(),
-        coverUpload = $('#cover-input')[0].files[0];
+        coverUpload = $('#cover-input')[0].files[0],
+        linkTwitter = document.querySelector('#link_twitter').value;
 
         if (titulo === '' || subtitulo === '' || cover === '' || contenido === '' || categoria === '' || subcategoria === '') {
           notificacionFlotante('error', 'Todos los campos son obligatorios');
@@ -329,6 +330,7 @@ function publishContent(e) {
             data.append('subcategoria', subcategoria);
             data.append('editor', editor);
             data.append('twitter', twitter);
+            data.append('linkTwitter', linkTwitter);
 
             $.ajax({
               url: 'php/publicaciones.php',
@@ -345,25 +347,25 @@ function publishContent(e) {
                     document.querySelector('form').reset();
                     const table = document.querySelector('#publications-table');
                   
-                  const listaUsuario = document.createElement('tr');
-                  listaUsuario.innerHTML = `
-                      <tr>
-                        <td>${response.titulo}</td>
-                        <td>${response.editor}</td>
-                        <td>${response.fecha}</td>
-                        <td>
-                            <a href="edit-publication.php?id=${response.id}" class="btn btn-sm btn-info">
-                                <i class="fa fa-edit"></i>
-                            </a>
-                            <input type="hidden" name="" value="${response.portada}" id="file-name">
-                            <button class="btn btn-sm btn-danger delete-publication" data-id="${response.id}">
-                                <i class="fa fa-trash"></i>
-                            </button>
-                        </td>
-                      </tr>
-                  `;
-                  
-                  table.appendChild(listaUsuario);
+                    const listaUsuario = document.createElement('tr');
+                    listaUsuario.innerHTML = `
+                        <tr>
+                          <td>${response.titulo}</td>
+                          <td>${response.editor}</td>
+                          <td>${response.fecha}</td>
+                          <td>
+                              <a href="edit-publication.php?id=${response.id}" class="btn btn-sm btn-info">
+                                  <i class="fa fa-edit"></i>
+                              </a>
+                              <input type="hidden" name="" value="${response.portada}" id="file-name">
+                              <button class="btn btn-sm btn-danger delete-publication" data-id="${response.id}">
+                                  <i class="fa fa-trash"></i>
+                              </button>
+                          </td>
+                        </tr>
+                    `;
+                    
+                    table.appendChild(listaUsuario);
 
                   // document.querySelector('#link-input').value = "";
                   }

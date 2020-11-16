@@ -254,3 +254,64 @@ div.card:hover {
     border: 1px solid var(--primaryColor);
     background-color: var(--primaryColor);
 }
+.page-link {
+    color: var(--primaryColor)!important;
+    border-radius: 0;
+    font-size: 1.2em;
+}
+.pagination {
+    border-radius: 0!important;
+}
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    background-color: var(--primaryColor)!important;
+    color: white!important;
+    border: 1px solid var(--primaryColor)!important;
+}
+.pagination > .disabled > a {
+    color: #5a5a5a!important;
+    opacity: 85%;
+}
+.pagination > .active > a
+{
+    background-color: var(--secondaryColor)!important;
+    color: white!important;
+    border: 1px solid var(--secondaryColor)!important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: var(--primaryColor)!important;
+    color: white!important;
+    border: 1px solid var(--primaryColor)!important;
+}
+.page-link {
+    border-radius: 0!important;
+    border: 1px solid var(--grayLine);
+}
+
+/* Contenido de las notas */
+div .contenido-nota {
+    font-size: 1.2em;
+}
+
+div .contenido-nota a {
+    text-decoration: none;
+    color: var(--primaryColor);
+}
+div .contenido-nota a:hover {
+    color: var(--secondaryColor);
+}
+blockquote {
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-left: 5px solid var(--primaryColor);
+    font-size: 1.3em;
+}
+
+/* Tienda online */
+.navbar-store {
+}

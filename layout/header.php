@@ -90,7 +90,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">TIENDA</a>
+            <a class="nav-link" href="./store">TIENDA</a>
         </li>
     </ul>
   </div>

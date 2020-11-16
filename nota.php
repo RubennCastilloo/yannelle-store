@@ -6,7 +6,7 @@
         ?> 
           <div class="justify-content-center text-center mt-5">
             <h3 class="text-danger">No pudimos localizar el contenido de esta pagina</h3>
-                        <a class="btn btn-success go-store mt-3" href="./"> Regresar a Taquilla </a>
+                        <a class="btn btn-success go-store mt-3" href="./"> Regresar a Inicio </a>
           </div>
         <?php
     }
@@ -91,6 +91,21 @@
         </li>
 
         <li class="nav-item">
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+              CIENCIA 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button"><i class="fas fa-meteor"></i> Espacio</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-heartbeat"></i> Salud</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-plug"></i> Energía</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-leaf"></i> Ambiente</button>
+              <a href="science/more/" class="dropdown-item" ><i class="fas fa-atom"></i> Todo Ciencia</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
             <a class="nav-link" href="#">TIENDA</a>
         </li>
     </ul>
@@ -131,11 +146,11 @@
         <div class="col-md-9">
             <h1 class="text-left"><?php echo ($nota['titulo']) ? $nota['titulo'] : ''; ?></h1>
             <h5><?php echo ($nota['subtitulo']) ? $nota['subtitulo'] : ''; ?></h5>
-            <p>Por <a class="autorLink" href=""><?php echo ($nota['editor']) ? $nota['editor'] : ''; ?></a> | <a class="autorLink" href=""><?php echo ($nota['twitter']) ? $nota['twitter'] : ''; ?></a> | <?php echo ($nota['fecha']) ? $nota['fecha'] : ''; ?> </p>
+            <p>Por <a class="autorLink" href=""><?php echo ($nota['editor']) ? $nota['editor'] : ''; ?></a> | <a class="autorLink" href="<?php echo $nota['link_twitter'] ?>" target="_blank">@<?php echo ($nota['twitter']) ? $nota['twitter'] : ''; ?></a> | <?php echo ($nota['fecha']) ? $nota['fecha'] : ''; ?> </p>
             <div class="picture">
                 <img src="./uploads/files/<?php echo ($nota['portada']) ? $nota['portada'] : ''; ?>" class="h-200 w-100" alt="">
             </div>
-            <div class="content mt-4">
+            <div class="content contenido-nota mt-4" id="contenido">
                 <?php echo ($nota['contenido']) ? $nota['contenido'] : ''; ?>
             </div>
 
@@ -153,13 +168,17 @@
                         </div>
                         <div class="col-md-8 col-sm-8 lineBottom mb-4">
                             <a class="links" href=""><h3><?php echo $publicacion['titulo'] ?></h3></a>
-                            <p>Por <a class="autorLink" href=""><?php echo $publicacion['editor'] ?></a> | <?php echo $publicacion['fecha'] ?></p>
+                            <p>Por <a class="autorLink" href="<?php echo $publicacion['link_twitter'] ?>" target="_blank"><?php echo $publicacion['editor'] ?></a> | <?php echo $publicacion['fecha'] ?></p>
                         </div>
 
                     <?php } 
                     } ?>
 
                         
+                    </div>
+
+                    <div class="text-center justify-content-center align-items-center mb-4 col-md-12">
+                      <button class="btn btn-outline-info btn-more col-md-12">Mas contenido</button>  
                     </div>
                 </div>
             </div>
@@ -185,6 +204,12 @@
     </div>
 </div>
 
+<script>
+  document.querySelectorAll(".contenido-nota a").forEach(function(a){
+    a.setAttribute('target', '_blank');
+  })
+</script>
+
 <?php 
-    include '../layout-sub/footer.php';
+    include './layout-sub/footer.php';
 ?>

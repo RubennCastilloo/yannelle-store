@@ -1,5 +1,8 @@
+<?php 
+  include '../administrator/php/functions.php';
+?>
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -18,7 +21,7 @@
     <link rel="stylesheet" href="../css/styles.css">
 
 
-    <title>Yannelle News</title>
+    <title>Yannelle Store</title>
   </head>
   <body>
 
@@ -35,21 +38,21 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav m-auto">
         <li class="nav-item">
-            <a class="nav-link" href="../../" id="inicio">INICIO <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/" id="inicio">INICIO <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <div class="dropdown">
-            <a class="nav-link dropdown-toggle" id="tech" type="button" id="dropdownMenu2" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
               TECH
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <a href="../apple/" class="dropdown-item" ><i class="fab fa-apple"></i> Apple</a>
-              <a href="../amazon/" class="dropdown-item" ><i class="fab fa-amazon"></i> Amazon</a>
-              <a href="../google/" class="dropdown-item" ><i class="fab fa-google"></i> Google</a>
-              <a href="../youtube/" class="dropdown-item" ><i class="fab fa-youtube"></i> YouTube</a>
-              <a href="../facebook/" class="dropdown-item" ><i class="fab fa-facebook-square"></i> Facebook</a>
-              <a href="../code/" class="dropdown-item" ><i class="fas fa-code"></i> Code</a>
-              <a href="../more/" class="dropdown-item" ><i class="fas fa-plus"></i> Más</a>
+              <a href="tech/apple/" class="dropdown-item" ><i class="fab fa-apple"></i> Apple</a>
+              <a href="tech/amazon/" class="dropdown-item" ><i class="fab fa-amazon"></i> Amazon</a>
+              <a href="tech/google/" class="dropdown-item" ><i class="fab fa-google"></i> Google</a>
+              <a href="tech/youtube/" class="dropdown-item" ><i class="fab fa-youtube"></i> YouTube</a>
+              <a href="tech/facebook/" class="dropdown-item" ><i class="fab fa-facebook-square"></i> Facebook</a>
+              <a href="tech/code/" class="dropdown-item" ><i class="fas fa-code"></i> Code</a>
+              <a href="tech/more/" class="dropdown-item" ><i class="fas fa-microchip"></i> Todo Tech</a>
             </div>
           </div>
         </li>
@@ -66,12 +69,28 @@
               <button class="dropdown-item" type="button"><i class="fas fa-book"></i> Libros</button>
               <button class="dropdown-item" type="button"><i class="fas fa-music"></i> Musica</button>
               <button class="dropdown-item" type="button"><i class="fas fa-podcast"></i> Podcast</button>
+              <a href="entretainment/more/" class="dropdown-item" ><i class="fas fa-laugh-beam"></i> Todo Entretenimiento</a>
             </div>
           </div>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">TIENDA</a>
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+              CIENCIA 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button"><i class="fas fa-meteor"></i> Espacio</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-heartbeat"></i> Salud</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-plug"></i> Energía</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-leaf"></i> Ambiente</button>
+              <a href="science/more/" class="dropdown-item" ><i class="fas fa-atom"></i> Todo Ciencia</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link store" href="./store">TIENDA</a>
         </li>
     </ul>
   </div>
@@ -83,7 +102,29 @@
     var url = location.pathname;
     console.log(url);
 
-    if (url === '/yannelle-store/tech/apple/' || url === '/yannelle-store/tech/amazon/' || url === '/yannelle-store/tech/google/' || url === '/yannelle-store/tech/youtube/' || url === '/yannelle-store/tech/facebook/' || url === '/yannelle-store/tech/code/') {
-        document.querySelector('#tech').classList.add('selected');
+    if (url === '/yannelle-store/') {
+        document.querySelector('#inicio').classList.add('selected');
+    }
+    if (url === '/yannelle-store/store/') {
+        document.querySelector('.store').classList.add('selected');
     }
 </script>
+
+<div class="container-fluid mt-3 mb-3">
+<?php $publicaciones = obtenerAds('1',0,1); 
+  if($publicaciones->num_rows) { 
+  foreach($publicaciones as $publicacion) { ?>
+  <div class="publicidad text-center align-items-center justify-content-center">
+    <a href="<?php echo $publicacion['link'] ?>" target="_blank">
+      <img src="../uploads/publ/<?php echo $publicacion['imagen'] ?>" class="h-100 w-100" alt="">
+    </a>
+  </div>
+  <?php } 
+    } else {
+      ?> 
+        <div class="publicidad text-center align-items-center justify-content-center">
+          Publicidad
+        </div>
+      <?php
+    } ?>
+</div>

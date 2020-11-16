@@ -46,13 +46,13 @@
               TECH
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <a href="../apple/" class="dropdown-item" ><i class="fab fa-apple"></i> Apple</a>
-              <a href="../amazon/" class="dropdown-item" ><i class="fab fa-amazon"></i> Amazon</a>
-              <a href="../google/" class="dropdown-item" ><i class="fab fa-google"></i> Google</a>
-              <a href="../youtube/" class="dropdown-item" ><i class="fab fa-youtube"></i> YouTube</a>
-              <a href="../facebook/" class="dropdown-item" ><i class="fab fa-facebook-square"></i> Facebook</a>
-              <a href="../code/" class="dropdown-item" ><i class="fas fa-code"></i> Code</a>
-              <a href="../more/" class="dropdown-item" ><i class="fas fa-plus"></i> Más</a>
+              <a href="../apple/?pagina=1" class="dropdown-item" ><i class="fab fa-apple"></i> Apple</a>
+              <a href="../amazon/?pagina=1" class="dropdown-item" ><i class="fab fa-amazon"></i> Amazon</a>
+              <a href="../google/?pagina=1" class="dropdown-item" ><i class="fab fa-google"></i> Google</a>
+              <a href="../youtube/?pagina=1" class="dropdown-item" ><i class="fab fa-youtube"></i> YouTube</a>
+              <a href="../facebook/?pagina=1" class="dropdown-item" ><i class="fab fa-facebook-square"></i> Facebook</a>
+              <a href="../code/?pagina=1" class="dropdown-item" ><i class="fas fa-code"></i> Code</a>
+              <a href="../more/?pagina=1" class="dropdown-item" ><i class="fas fa-plus"></i> Más</a>
             </div>
           </div>
         </li>
@@ -74,7 +74,22 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">TIENDA</a>
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+              CIENCIA 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button"><i class="fas fa-meteor"></i> Espacio</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-heartbeat"></i> Salud</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-plug"></i> Energía</button>
+              <button class="dropdown-item" type="button"><i class="fas fa-leaf"></i> Ambiente</button>
+              <a href="science/more/" class="dropdown-item" ><i class="fas fa-atom"></i> Todo Ciencia</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="../../store/">TIENDA</a>
         </li>
     </ul>
   </div>

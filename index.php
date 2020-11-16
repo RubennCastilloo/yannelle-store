@@ -122,7 +122,7 @@
             } ?>
 
                 <div class="text-center justify-content-center align-items-center mb-4 col-md-12">
-                  <button class="btn btn-outline-info btn-more col-md-12">Mas contenido</button>  
+                  <a href="./archives" class="btn btn-outline-info btn-more col-md-12">Mas contenido</a>  
                 </div>
             </div>
             

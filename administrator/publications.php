@@ -16,19 +16,19 @@
                                         <hr>
                                         <form>
                                             <div class="row">
-                                                <div class="form-group has-success col-md-12">
+                                                <div class="form-group col-md-12">
                                                     <label for="titulo" class="control-label mb-1">Título</label>
                                                     <input id="titulo" type="text" class="form-control">
                                                 </div>
-                                                <div class="form-group has-success col-md-12">
+                                                <div class="form-group col-md-12">
                                                     <label for="subtitulo" class="control-label mb-1">Subtítulo</label>
                                                     <input id="subtitulo" type="text" class="form-control">
                                                 </div>
-                                                <div class="form-group has-success col-md-12 mb-4">
+                                                <div class="form-group col-md-12 mb-4">
                                                     <label for="cover-input" class=" form-control-label">Portada</label>
                                                     <input type="file" id="cover-input" class="form-control-file">
                                                 </div>
-                                                <div class="form-group has-success col-md-12 mb-4 subir-archivos">
+                                                <div class="form-group col-md-12 mb-4 subir-archivos">
                                                     <label for="link-input" class=" form-control-label">Subir Archivos (Obtener link)</label>
                                                     <input type="file" id="link-input" class="form-control-file">
 
@@ -56,7 +56,7 @@
                                             </div>
                                             <div class="form-group has-success col-md-12">
                                                 <input id="trix-editor" type="hidden" name="content"/>
-                                                <trix-editor input="trix-editor" class="trix-content" id="contenido" autofocus contenteditable role="textbox"></trix-editor>
+                                                <trix-editor input="trix-editor" class="trix-content" id="contenido" contenteditable role="textbox"></trix-editor>
                                             </div>
                                             <div class="form-group has-success col-md-12">
                                                 <label for="categoria" class=" form-control-label">Categoría</label>
@@ -75,7 +75,8 @@
                                             </div>
                                             <div class="form-group has-success col-md-12">
                                                 <input type="hidden" name="" value="<?php echo $_SESSION['nombre'] . " " . $_SESSION['apellido'] ?>" id="editor">
-                                                <input type="hidden" name="" value="<?php $_SESSION['twitter']?>" id="twitter">
+                                                <input type="hidden" name="" value="<?php echo $_SESSION['twitter']?>" id="twitter">
+                                                <input type="hidden" name="" value="<?php echo $_SESSION['link_twitter']?>" id="link_twitter">
                                                 <button id="new-publication" type="submit" class="btn btn-lg btn-info btn-block">
                                                     <i class="fa fa-check fa-lg"></i>&nbsp;
                                                     <span>Publicar</span>
