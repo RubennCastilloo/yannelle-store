@@ -30,7 +30,12 @@
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="twitter" class="control-label mb-1">Twitter</label>
-                                                <input id="twitter" type="text" class="form-control">
+                                                <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                                </div>
+                                                <input id="twitter" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                                </div>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="link-twitter" class="control-label mb-1">Link de Twitter</label>

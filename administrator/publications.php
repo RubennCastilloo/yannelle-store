@@ -106,7 +106,7 @@
                                         if($publicaciones->num_rows) { 
                                         foreach($publicaciones as $publicacion) { ?>
                                             <tr>
-                                                <td><?php echo $publicacion['titulo'] ?></td>
+                                                <td class="text-left"><?php echo $publicacion['titulo'] ?></td>
                                                 <td><?php echo $publicacion['editor'] ?></td>
                                                 <td><?php echo $publicacion['fecha'] ?></td>
                                                 <td>

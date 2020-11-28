@@ -50,7 +50,7 @@ function cambiarSubcategoria(){
         <option value="youtube">Youtube</option>
         <option value="facebook">Facebook</option>
         <option value="code">Code</option>
-        <option value="mas-techa">Más Tech</option>
+        <option value="mas-tech">Más Tech</option>
         `;
     }
     if (selectedOption.value === "entretenimiento") {

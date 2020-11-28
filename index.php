@@ -34,7 +34,7 @@
 
     <div class="col-md-6 p-0">
         <div class="card bg-inverse">
-          <img class="card-img image-cover" src="./uploads/files/<?php echo $publicacion['portada'] ?>" alt="Card image cap">
+          <img class="card-img image-cover" src="./uploads/files/<?php echo $publicacion['portada'] ?>" alt="<?php echo $publicacion['portada'] ?>">
           <div class="card-img-overlay d-flex align-items-end">
             <div class="row title-back">
               <div class="col-md-12">
@@ -107,7 +107,7 @@
             if($publicaciones->num_rows) { 
             foreach($publicaciones as $publicacion) { ?>
                 <div class="col-md-4 col-sm-4 mb-4">
-                    <img src="./uploads/files/<?php echo $publicacion['portada'] ?>" alt="" class="h-200 w-100">
+                    <img src="./uploads/files/<?php echo $publicacion['portada'] ?>" alt="<?php echo $publicacion['portada'] ?>" class="h-200 w-100">
                 </div>
                 <div class="col-md-8 col-sm-8 lineBottom mb-4">
                     <a class="links" href="./nota.php?id=<?php echo $publicacion['id'] ?>"><h3><?php echo $publicacion['titulo'] ?></h3></a>
@@ -122,7 +122,7 @@
             } ?>
 
                 <div class="text-center justify-content-center align-items-center mb-4 col-md-12">
-                  <a href="./archives" class="btn btn-outline-info btn-more col-md-12">Mas contenido</a>  
+                  <a href="./archives" class="btn btn-outline-info btn-more col-md-12">Más contenido</a>  
                 </div>
             </div>
             

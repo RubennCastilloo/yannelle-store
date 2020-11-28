@@ -46,13 +46,13 @@
               TECH
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <a href="../apple/?pagina=1" class="dropdown-item" ><i class="fab fa-apple"></i> Apple</a>
-              <a href="../amazon/?pagina=1" class="dropdown-item" ><i class="fab fa-amazon"></i> Amazon</a>
-              <a href="../google/?pagina=1" class="dropdown-item" ><i class="fab fa-google"></i> Google</a>
-              <a href="../youtube/?pagina=1" class="dropdown-item" ><i class="fab fa-youtube"></i> YouTube</a>
-              <a href="../facebook/?pagina=1" class="dropdown-item" ><i class="fab fa-facebook-square"></i> Facebook</a>
-              <a href="../code/?pagina=1" class="dropdown-item" ><i class="fas fa-code"></i> Code</a>
-              <a href="../more/?pagina=1" class="dropdown-item" ><i class="fas fa-plus"></i> Más</a>
+              <a href="#" class="dropdown-item apple"><i class="fab fa-apple"></i> Apple</a>
+              <a href="#" class="dropdown-item amazon"><i class="fab fa-amazon"></i> Amazon</a>
+              <a href="#" class="dropdown-item google"><i class="fab fa-google"></i> Google</a>
+              <a href="#" class="dropdown-item youtube"><i class="fab fa-youtube"></i> YouTube</a>
+              <a href="#" class="dropdown-item facebook"><i class="fab fa-facebook-square"></i> Facebook</a>
+              <a href="#" class="dropdown-item code"><i class="fas fa-code"></i> Code</a>
+              <a href="#" class="dropdown-item more-tech"><i class="fas fa-plus"></i> Más</a>
             </div>
           </div>
         </li>
@@ -63,12 +63,12 @@
               ENTRETENIMIENTO 
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button class="dropdown-item" type="button"><i class="fas fa-film"></i> Peliculas</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-tv"></i> TV</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-gamepad"></i> Videojuegos</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-book"></i> Libros</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-music"></i> Musica</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-podcast"></i> Podcast</button>
+              <a href="#" class="dropdown-item peliculas"><i class="fas fa-film"></i> Peliculas</a>
+              <a href="#" class="dropdown-item tv"><i class="fas fa-tv"></i> TV</a>
+              <a href="#" class="dropdown-item videojuegos"><i class="fas fa-gamepad"></i> Videojuegos</a>
+              <a href="#" class="dropdown-item libros"><i class="fas fa-book"></i> Libros</a>
+              <a href="#" class="dropdown-item musica"><i class="fas fa-music"></i> Musica</a>
+              <a href="#" class="dropdown-item podcast"><i class="fas fa-podcast"></i> Podcast</a>
             </div>
           </div>
         </li>
@@ -79,18 +79,18 @@
               CIENCIA 
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button class="dropdown-item" type="button"><i class="fas fa-meteor"></i> Espacio</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-heartbeat"></i> Salud</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-plug"></i> Energía</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-leaf"></i> Ambiente</button>
-              <a href="science/more/" class="dropdown-item" ><i class="fas fa-atom"></i> Todo Ciencia</a>
+              <a href="#" class="dropdown-item espacio"><i class="fas fa-meteor"></i> Espacio</button>
+              <a href="#" class="dropdown-item salud"><i class="fas fa-heartbeat"></i> Salud</button>
+              <a href="#" class="dropdown-item energia"><i class="fas fa-plug"></i> Energía</button>
+              <a href="#" class="dropdown-item ambiente"><i class="fas fa-leaf"></i> Ambiente</button>
+              <a href="#" class="dropdown-item more-ciencia"><i class="fas fa-atom"></i> Todo Ciencia</a>
             </div>
           </div>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="../../store/">TIENDA</a>
-        </li>
+        </li> -->
     </ul>
   </div>
   </div>
@@ -122,3 +122,87 @@
         </div>
       <?php
     } ?>
+
+    <script>
+      var url = window.location.pathname;
+      if(url === '/yannelle-store/tech/apple/' || url === '/yannelle-store/tech/amazon/' || url === '/yannelle-store/tech/google/' || url === '/yannelle-store/tech/youtube/' || url === '/yannelle-store/tech/facebook/' || url === '/yannelle-store/tech/code/' || url === '/yannelle-store/tech/more/'){
+        document.querySelector('.peliculas').href = '../../entretenimiento/peliculas/';
+        document.querySelector('.tv').href = '../../entretenimiento/tv/';
+        document.querySelector('.videojuegos').href = '../../entretenimiento/videojuegos/';
+        document.querySelector('.libros').href = '../../entretenimiento/libros/';
+        document.querySelector('.musica').href = '../../entretenimiento/musica/';
+        document.querySelector('.podcast').href = '../../entretenimiento/podcast/';
+
+        // Tecnologia
+
+        document.querySelector('.apple').href = '../apple/';
+        document.querySelector('.amazon').href = '../amazon/';
+        document.querySelector('.google').href = '../google/';
+        document.querySelector('.youtube').href = '../youtube/';
+        document.querySelector('.facebook').href = '../facebook/';
+        document.querySelector('.code').href = '../code/';
+        document.querySelector('.more-tech').href = '../more/';
+
+        //Ciencia
+
+        document.querySelector('.espacio').href = '../../ciencia/espacio';
+        document.querySelector('.salud').href = '../../ciencia/salud';
+        document.querySelector('.energia').href = '../../ciencia/energia';
+        document.querySelector('.ambiente').href = '../../ciencia/ambiente';
+        document.querySelector('.more-ciencia').href = '../../ciencia/more';
+      }
+
+      if(url === '/yannelle-store/entretenimiento/peliculas/' || url === '/yannelle-store/entretenimiento/tv/' || url === '/yannelle-store/entretenimiento/videojuegos/' || url === '/yannelle-store/entretenimiento/libros/' || url === '/yannelle-store/entretenimiento/musica/' || url === '/yannelle-store/entretenimiento/podcast/'){
+        document.querySelector('.peliculas').href = '../peliculas/';
+        document.querySelector('.tv').href = '../tv/';
+        document.querySelector('.videojuegos').href = '../videojuegos/';
+        document.querySelector('.libros').href = '../libros/';
+        document.querySelector('.musica').href = '../musica/';
+        document.querySelector('.podcast').href = '../podcast/';
+
+        // Tecnologia
+
+        document.querySelector('.apple').href = '../../tech/apple/';
+        document.querySelector('.amazon').href = '../../tech/amazon/';
+        document.querySelector('.google').href = '../../tech/google/';
+        document.querySelector('.youtube').href = '../../tech/youtube/';
+        document.querySelector('.facebook').href = '../../tech/facebook/';
+        document.querySelector('.code').href = '../../tech/code/';
+        document.querySelector('.more-tech').href = '../../tech/more/';
+
+        // Ciencia
+
+        document.querySelector('.espacio').href = '../../ciencia/espacio';
+        document.querySelector('.salud').href = '../../ciencia/salud';
+        document.querySelector('.energia').href = '../../ciencia/energia';
+        document.querySelector('.ambiente').href = '../../ciencia/ambiente';
+        document.querySelector('.more-ciencia').href = '../../ciencia/more';
+      }
+
+      if(url === '/yannelle-store/ciencia/espacio/' || url === '/yannelle-store/ciencia/salud/' || url === '/yannelle-store/ciencia/energia/' || url === '/yannelle-store/ciencia/ambiente/' || url === '/yannelle-store/ciencia/more/'){
+        document.querySelector('.peliculas').href = '../../entretenimiento/peliculas/';
+        document.querySelector('.tv').href = '../../entretenimiento/tv/';
+        document.querySelector('.videojuegos').href = '../../entretenimiento/videojuegos/';
+        document.querySelector('.libros').href = '../../entretenimiento/libros/';
+        document.querySelector('.musica').href = '../../entretenimiento/musica/';
+        document.querySelector('.podcast').href = '../../entretenimiento/podcast/';
+
+        // Tecnologia
+
+        document.querySelector('.apple').href = '../../tech/apple/';
+        document.querySelector('.amazon').href = '../../tech/amazon/';
+        document.querySelector('.google').href = '../../tech/google/';
+        document.querySelector('.youtube').href = '../../tech/youtube/';
+        document.querySelector('.facebook').href = '../../tech/facebook/';
+        document.querySelector('.code').href = '../../tech/code/';
+        document.querySelector('.more-tech').href = '../../tech/more/';
+
+        // Ciencia
+
+        document.querySelector('.espacio').href = '../espacio';
+        document.querySelector('.salud').href = '../salud';
+        document.querySelector('.energia').href = '../energia';
+        document.querySelector('.ambiente').href = '../ambiente';
+        document.querySelector('.more-ciencia').href = '../more';
+      }
+    </script>

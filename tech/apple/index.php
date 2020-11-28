@@ -7,7 +7,7 @@
     include '../../layout-sub/header.php';
     $resultado = obtenerPublicacionesCategorias('tech', 'apple');
     $total_registros = $resultado->num_rows;
-    $articulos_por_pagina = 2;
+    $articulos_por_pagina = 10;
     $paginas = ceil($total_registros / $articulos_por_pagina);
 
     if($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0 ) {
@@ -32,8 +32,8 @@
         } else {
         ?> 
         
-            <div class="publicidad text-center align-items-center justify-content-center">
-            No hay contenido para mostrar
+            <div class="text-center align-items-center justify-content-center">
+                Pronto prepararemos una gran descripción
             </div>
         <?php
         } ?>
@@ -52,7 +52,7 @@
                     <img src="../../uploads/files/<?php echo $publicacion['portada'] ?>" alt="<?php echo $publicacion['portada'] ?>" class="h-200 w-100">
                 </div>
                 <div class="col-md-8 col-sm-8 lineBottom mb-4">
-                    <a class="links" href="../nota.php?id=<?php echo $publicacion['id'] ?>"><h3><?php echo $publicacion['titulo'] ?></h3></a>
+                    <a class="links" href="../../nota.php?id=<?php echo $publicacion['id'] ?>"><h3><?php echo $publicacion['titulo'] ?></h3></a>
                     <p>Por <a class="autorLink" href=""><?php echo $publicacion['editor'] ?></a> | <?php echo $publicacion['fecha'] ?></p>
                 </div>
                 
@@ -86,7 +86,7 @@
                 
         <?php    } else {
                 ?> 
-                  <h4 class="container text-danger mt-3 mb-3 text-center">No hay contenido para mostrar</h4>
+                  <h4 class="container text-danger mt-3 mb-5 text-center">De momento no hay contenido para mostrar</h4>
                 <?php
             } ?>
 

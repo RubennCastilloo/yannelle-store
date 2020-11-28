@@ -65,7 +65,7 @@ function uploadFiles(e){
           processData: false,
           success: function(data) {
             var response = JSON.parse(data);
-              // console.log(response);
+              console.log(response);
 
               const url = window.location.pathname;
 
@@ -79,8 +79,8 @@ function uploadFiles(e){
               const listaUsuario = document.createElement('tr');
               listaUsuario.innerHTML = `
                 <td class="url-file">
-                  <input type="hidden" name="" value="../uploads/files/${response.archivo}" class="input-hid">
-                  <a href="../uploads/files/${response.archivo}" target="_blank">${response.archivo}</a>
+                  <input type="hidden" name="" value="./uploads/files/${response.archivo}" class="input-hid">
+                  <a href="./uploads/files/${response.archivo}" target="_blank">${response.archivo}</a>
                 </td>
                 <td>
                   <button class="copy-url btn btn-sm btn-success">
@@ -126,7 +126,7 @@ function actionFiles(e){
       var splitName = cop.split('/');
       var lenName = splitName.length - 1;
       if(split[len] === 'jpg' || split[len] === 'png' || split[len] === 'gif'){
-        temporal.value = `<img src="${cop}" alt="${splitName[lenName]}">`;
+        temporal.value = `<img src="${cop}" alt="${splitName[lenName]}" style="height: 400px; max-width: 100%;" />`;
       } else {
         temporal.value = `<a src="${cop}" target="_blank" alt="${splitName[lenName]}">`;
       }
@@ -286,7 +286,7 @@ function deleteFiles(e) {
       var splitName = cop.split('/');
       var lenName = splitName.length - 1;
       if(split[len] === 'jpg' || split[len] === 'png' || split[len] === 'gif'){
-        temporal.value = `<img src="${cop}" alt="${splitName[lenName]}">`;
+        temporal.value = `<img src="${cop}" alt="${splitName[lenName]}" style="height: 400px; max-width: 100%;" />`;
       } else {
         temporal.value = `<a src="${cop}" target="_blank" alt="${splitName[lenName]}">`;
       }
@@ -531,3 +531,4 @@ function editPublication(e){
             }
         }
 }
+

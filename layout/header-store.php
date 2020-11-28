@@ -53,7 +53,18 @@
 
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link" href="/" id="inicio"><i class="fas fa-shopping-bag"></i> <span>1</span></a>
+            <a class="nav-link" href="#" id=""><i class="fas fa-shopping-bag icon-shop"></i> <span>1</span></a>
+        </li>
+        <li class="nav-item">
+            <div class="btn-group dropleft">
+              <button type="button" class="btn nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user icon-shop"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a href="tech/apple/" class="dropdown-item" ><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+            </div>
+              </div>
+            </div>
         </li>
     </ul>
   </div>

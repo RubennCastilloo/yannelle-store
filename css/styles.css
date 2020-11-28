@@ -68,6 +68,10 @@ button.dropdown-toggle:hover {
     display: block;
     width: fit-content;
 }
+.dropleft:hover>.dropdown-menu {
+    display: block;
+    width: fit-content;
+}
 .dropdown-menu button:hover {
     color: var(--primaryColor);
 }
@@ -313,5 +317,15 @@ blockquote {
 }
 
 /* Tienda online */
-.navbar-store {
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+.icon-shop {
+    font-size: 1.3em;
+}
+
+.construct-image {
+    height: 500px;
+    max-width: 100%;
 }

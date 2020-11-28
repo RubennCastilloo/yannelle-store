@@ -2,7 +2,7 @@
   include '../administrator/php/functions.php';
   $resultado = obtenerPublicaciones();
   $total_registros = $resultado->num_rows;
-  $articulos_por_pagina = 2;
+  $articulos_por_pagina = 10;
   $paginas = ceil($total_registros / $articulos_por_pagina);
 
   if (!$_GET) {
@@ -57,17 +57,17 @@
         </li>
         <li class="nav-item">
           <div class="dropdown">
-            <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle" id="tech" type="button" id="dropdownMenu2" data-toggle="dropdown">
               TECH
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <a href="../tech/apple/" class="dropdown-item" ><i class="fab fa-apple"></i> Apple</a>
-              <a href="../tech/amazon/" class="dropdown-item" ><i class="fab fa-amazon"></i> Amazon</a>
-              <a href="../tech/google/" class="dropdown-item" ><i class="fab fa-google"></i> Google</a>
-              <a href="../tech/youtube/" class="dropdown-item" ><i class="fab fa-youtube"></i> YouTube</a>
-              <a href="../tech/facebook/" class="dropdown-item" ><i class="fab fa-facebook-square"></i> Facebook</a>
-              <a href="../tech/code/" class="dropdown-item" ><i class="fas fa-code"></i> Code</a>
-              <a href="../tech/more/" class="dropdown-item" ><i class="fas fa-microchip"></i> Todo Tech</a>
+              <a href="#" class="dropdown-item apple"><i class="fab fa-apple"></i> Apple</a>
+              <a href="#" class="dropdown-item amazon"><i class="fab fa-amazon"></i> Amazon</a>
+              <a href="#" class="dropdown-item google"><i class="fab fa-google"></i> Google</a>
+              <a href="#" class="dropdown-item youtube"><i class="fab fa-youtube"></i> YouTube</a>
+              <a href="#" class="dropdown-item facebook"><i class="fab fa-facebook-square"></i> Facebook</a>
+              <a href="#" class="dropdown-item code"><i class="fas fa-code"></i> Code</a>
+              <a href="#" class="dropdown-item more-tech"><i class="fas fa-plus"></i> Más</a>
             </div>
           </div>
         </li>
@@ -78,13 +78,12 @@
               ENTRETENIMIENTO 
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button class="dropdown-item" type="button"><i class="fas fa-film"></i> Peliculas</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-tv"></i> TV</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-gamepad"></i> Videojuegos</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-book"></i> Libros</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-music"></i> Musica</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-podcast"></i> Podcast</button>
-              <a href="entretainment/more/" class="dropdown-item" ><i class="fas fa-laugh-beam"></i> Todo Entretenimiento</a>
+              <a href="#" class="dropdown-item peliculas"><i class="fas fa-film"></i> Peliculas</a>
+              <a href="#" class="dropdown-item tv"><i class="fas fa-tv"></i> TV</a>
+              <a href="#" class="dropdown-item videojuegos"><i class="fas fa-gamepad"></i> Videojuegos</a>
+              <a href="#" class="dropdown-item libros"><i class="fas fa-book"></i> Libros</a>
+              <a href="#" class="dropdown-item musica"><i class="fas fa-music"></i> Musica</a>
+              <a href="#" class="dropdown-item podcast"><i class="fas fa-podcast"></i> Podcast</a>
             </div>
           </div>
         </li>
@@ -95,18 +94,18 @@
               CIENCIA 
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button class="dropdown-item" type="button"><i class="fas fa-meteor"></i> Espacio</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-heartbeat"></i> Salud</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-plug"></i> Energía</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-leaf"></i> Ambiente</button>
-              <a href="science/more/" class="dropdown-item" ><i class="fas fa-atom"></i> Todo Ciencia</a>
+              <a href="#" class="dropdown-item espacio"><i class="fas fa-meteor"></i> Espacio</button>
+              <a href="#" class="dropdown-item salud"><i class="fas fa-heartbeat"></i> Salud</button>
+              <a href="#" class="dropdown-item energia"><i class="fas fa-plug"></i> Energía</button>
+              <a href="#" class="dropdown-item ambiente"><i class="fas fa-leaf"></i> Ambiente</button>
+              <a href="#" class="dropdown-item more-ciencia"><i class="fas fa-atom"></i> Todo Ciencia</a>
             </div>
           </div>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="#">TIENDA</a>
-        </li>
+        </li> -->
     </ul>
   </div>
   </div>
@@ -128,7 +127,7 @@
   foreach($publicaciones as $publicacion) { ?>
   <div class="publicidad text-center align-items-center justify-content-center">
     <a href="<?php echo $publicacion['link'] ?>" target="_blank">
-      <img src="../uploads/publ/<?php echo $publicacion['imagen'] ?>" class="h-100 w-100" alt="">
+      <img src="../uploads/publ/<?php echo $publicacion['imagen'] ?>" class="h-100 w-100" alt="<?php echo $publicacion['imagen'] ?>">
     </a>
   </div>
   <?php } 
@@ -156,7 +155,7 @@
             foreach($publicaciones as $publicacion) { ?>
 
                 <div class="col-md-4 col-sm-4 mb-4">
-                    <img src="../uploads/files/<?php echo $publicacion['portada'] ?>" alt="" class="h-200 w-100">
+                    <img src="../uploads/files/<?php echo $publicacion['portada'] ?>" alt="<?php echo $publicacion['portada'] ?>" class="h-200 w-100">
                 </div>
                 <div class="col-md-8 col-sm-8 lineBottom mb-4">
                     <a class="links" href="../nota.php?id=<?php echo $publicacion['id'] ?>"><h3><?php echo $publicacion['titulo'] ?></h3></a>
@@ -207,7 +206,7 @@
         <div class="col-md-3 text-center d-sm-none d-md-block">
             <div class="publicidad text-center align-items-center justify-content-center">
             <a href="<?php echo $publicacion['link'] ?>" target="_blank">
-              <img src="../uploads/publ/<?php echo $publicacion['imagen'] ?>" class="h-100 w-100" alt="">
+              <img src="../uploads/publ/<?php echo $publicacion['imagen'] ?>" class="h-100 w-100" alt=" <?php echo $publicacion['imagen'] ?>">
             </a>
             </div>
         </div>
@@ -286,6 +285,39 @@
       </div>
  </div>
   </footer>
+
+  <script>
+      var url = window.location.pathname;
+      if(url === '/yannelle-store/archives/'){
+
+        // Entretenimiento
+
+        document.querySelector('.peliculas').href = '../entretenimiento/peliculas/';
+        document.querySelector('.tv').href = '../entretenimiento/tv/';
+        document.querySelector('.videojuegos').href = '../entretenimiento/videojuegos/';
+        document.querySelector('.libros').href = '../entretenimiento/libros/';
+        document.querySelector('.musica').href = '../entretenimiento/musica/';
+        document.querySelector('.podcast').href = '../entretenimiento/podcast/';
+
+        // Tecnologia
+
+        document.querySelector('.apple').href = '../tech/apple/';
+        document.querySelector('.amazon').href = '../tech/amazon/';
+        document.querySelector('.google').href = '../tech/google/';
+        document.querySelector('.youtube').href = '../tech/youtube/';
+        document.querySelector('.facebook').href = '../tech/facebook/';
+        document.querySelector('.code').href = '../tech/code/';
+        document.querySelector('.more-tech').href = '../tech/more/';
+
+        //Ciencia
+
+        document.querySelector('.espacio').href = '../ciencia/espacio';
+        document.querySelector('.salud').href = '../ciencia/salud';
+        document.querySelector('.energia').href = '../ciencia/energia';
+        document.querySelector('.ambiente').href = '../ciencia/ambiente';
+        document.querySelector('.more-ciencia').href = '../ciencia/more';
+      }
+    </script>
 
 
     <!-- Optional JavaScript -->

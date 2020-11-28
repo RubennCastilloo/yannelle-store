@@ -39,7 +39,12 @@
                                             </div>
                                             <div class="form-group has-success col-md-6">
                                                 <label for="twitter" class="control-label mb-1">Twitter</label>
-                                                <input id="twitter" type="text" class="form-control" value="<?php echo ($usuario['twitter']) ? $usuario['twitter'] : '';  ?>">
+                                                <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                                </div>
+                                                <input id="twitter" type="text" class="form-control" value="<?php echo ($usuario['twitter']) ? $usuario['twitter'] : '';  ?>" aria-describedby="basic-addon1">
+                                                </div>
                                             </div>
                                             <div class="form-group has-success col-md-6">
                                                 <label for="password" class="control-label mb-1">Constraseña</label>

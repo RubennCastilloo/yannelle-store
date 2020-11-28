@@ -13,7 +13,6 @@
     
       $respuesta = obtenerPublicacion($id);
       $nota = $respuesta->fetch_assoc();
-
     
 
 ?>
@@ -55,21 +54,21 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav m-auto">
         <li class="nav-item">
-            <a class="nav-link" href="/" id="inicio">INICIO <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./" id="inicio">INICIO <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <div class="dropdown">
-            <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle" id="tech" type="button" id="dropdownMenu2" data-toggle="dropdown">
               TECH
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <a href="tech/apple/" class="dropdown-item" ><i class="fab fa-apple"></i> Apple</a>
-              <a href="tech/amazon/" class="dropdown-item" ><i class="fab fa-amazon"></i> Amazon</a>
-              <a href="tech/google/" class="dropdown-item" ><i class="fab fa-google"></i> Google</a>
-              <a href="tech/youtube/" class="dropdown-item" ><i class="fab fa-youtube"></i> YouTube</a>
-              <a href="tech/facebook/" class="dropdown-item" ><i class="fab fa-facebook-square"></i> Facebook</a>
-              <a href="tech/code/" class="dropdown-item" ><i class="fas fa-code"></i> Code</a>
-              <a href="../more/" class="dropdown-item" ><i class="fas fa-plus"></i> Más</a>
+              <a href="#" class="dropdown-item apple"><i class="fab fa-apple"></i> Apple</a>
+              <a href="#" class="dropdown-item amazon"><i class="fab fa-amazon"></i> Amazon</a>
+              <a href="#" class="dropdown-item google"><i class="fab fa-google"></i> Google</a>
+              <a href="#" class="dropdown-item youtube"><i class="fab fa-youtube"></i> YouTube</a>
+              <a href="#" class="dropdown-item facebook"><i class="fab fa-facebook-square"></i> Facebook</a>
+              <a href="#" class="dropdown-item code"><i class="fas fa-code"></i> Code</a>
+              <a href="#" class="dropdown-item more-tech"><i class="fas fa-plus"></i> Más</a>
             </div>
           </div>
         </li>
@@ -80,12 +79,12 @@
               ENTRETENIMIENTO 
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button class="dropdown-item" type="button"><i class="fas fa-film"></i> Peliculas</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-tv"></i> TV</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-gamepad"></i> Videojuegos</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-book"></i> Libros</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-music"></i> Musica</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-podcast"></i> Podcast</button>
+              <a href="#" class="dropdown-item peliculas"><i class="fas fa-film"></i> Peliculas</a>
+              <a href="#" class="dropdown-item tv"><i class="fas fa-tv"></i> TV</a>
+              <a href="#" class="dropdown-item videojuegos"><i class="fas fa-gamepad"></i> Videojuegos</a>
+              <a href="#" class="dropdown-item libros"><i class="fas fa-book"></i> Libros</a>
+              <a href="#" class="dropdown-item musica"><i class="fas fa-music"></i> Musica</a>
+              <a href="#" class="dropdown-item podcast"><i class="fas fa-podcast"></i> Podcast</a>
             </div>
           </div>
         </li>
@@ -96,18 +95,18 @@
               CIENCIA 
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <button class="dropdown-item" type="button"><i class="fas fa-meteor"></i> Espacio</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-heartbeat"></i> Salud</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-plug"></i> Energía</button>
-              <button class="dropdown-item" type="button"><i class="fas fa-leaf"></i> Ambiente</button>
-              <a href="science/more/" class="dropdown-item" ><i class="fas fa-atom"></i> Todo Ciencia</a>
+              <a href="#" class="dropdown-item espacio"><i class="fas fa-meteor"></i> Espacio</button>
+              <a href="#" class="dropdown-item salud"><i class="fas fa-heartbeat"></i> Salud</button>
+              <a href="#" class="dropdown-item energia"><i class="fas fa-plug"></i> Energía</button>
+              <a href="#" class="dropdown-item ambiente"><i class="fas fa-leaf"></i> Ambiente</button>
+              <a href="#" class="dropdown-item more-ciencia"><i class="fas fa-atom"></i> Todo Ciencia</a>
             </div>
           </div>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="#">TIENDA</a>
-        </li>
+        </li> -->
     </ul>
   </div>
   </div>
@@ -144,6 +143,7 @@
 <div class="container notes mt-5 lineBottom">
     <div class="row">
         <div class="col-md-9">
+        <?php if($nota !== NULL){ ?>
             <h1 class="text-left"><?php echo ($nota['titulo']) ? $nota['titulo'] : ''; ?></h1>
             <h5><?php echo ($nota['subtitulo']) ? $nota['subtitulo'] : ''; ?></h5>
             <p>Por <a class="autorLink" href=""><?php echo ($nota['editor']) ? $nota['editor'] : ''; ?></a> | <a class="autorLink" href="<?php echo $nota['link_twitter'] ?>" target="_blank">@<?php echo ($nota['twitter']) ? $nota['twitter'] : ''; ?></a> | <?php echo ($nota['fecha']) ? $nota['fecha'] : ''; ?> </p>
@@ -151,8 +151,15 @@
                 <img src="./uploads/files/<?php echo ($nota['portada']) ? $nota['portada'] : ''; ?>" class="h-200 w-100" alt="">
             </div>
             <div class="content contenido-nota mt-4" id="contenido">
-                <?php echo ($nota['contenido']) ? $nota['contenido'] : ''; ?>
+                <?php echo htmlspecialchars_decode($nota['contenido']) ? htmlspecialchars_decode($nota['contenido']) : ''; ?>
             </div>
+
+            <?php } else {?>
+
+            <h4 class="text-center text-danger">No pudimos localizar la nota que buscas</h4>
+            <p class="text-center">Te sugerimos <a href="./" class="autorLink">regresar</a> para buscar más contenido</p>
+
+            <?php }?>
 
             <div class="last-news mt-5">
                 <small class="text-uppercase">Últimas</small>
@@ -178,7 +185,7 @@
                     </div>
 
                     <div class="text-center justify-content-center align-items-center mb-4 col-md-12">
-                      <button class="btn btn-outline-info btn-more col-md-12">Mas contenido</button>  
+                      <a href="./archives/" class="btn btn-outline-info btn-more col-md-12">Más contenido</a>  
                     </div>
                 </div>
             </div>
@@ -208,6 +215,37 @@
   document.querySelectorAll(".contenido-nota a").forEach(function(a){
     a.setAttribute('target', '_blank');
   })
+
+      var url = window.location.pathname;
+      if(url === '/yannelle-store/nota.php'){
+
+        // Entretenimiento
+
+        document.querySelector('.peliculas').href = './entretenimiento/peliculas/';
+        document.querySelector('.tv').href = './entretenimiento/tv/';
+        document.querySelector('.videojuegos').href = './entretenimiento/videojuegos/';
+        document.querySelector('.libros').href = './entretenimiento/libros/';
+        document.querySelector('.musica').href = './entretenimiento/musica/';
+        document.querySelector('.podcast').href = './entretenimiento/podcast/';
+
+        // Tecnologia
+
+        document.querySelector('.apple').href = './tech/apple/';
+        document.querySelector('.amazon').href = './tech/amazon/';
+        document.querySelector('.google').href = './tech/google/';
+        document.querySelector('.youtube').href = './tech/youtube/';
+        document.querySelector('.facebook').href = './tech/facebook/';
+        document.querySelector('.code').href = './tech/code/';
+        document.querySelector('.more-tech').href = './tech/more/';
+
+        //Ciencia
+
+        document.querySelector('.espacio').href = './ciencia/espacio';
+        document.querySelector('.salud').href = './ciencia/salud';
+        document.querySelector('.energia').href = './ciencia/energia';
+        document.querySelector('.ambiente').href = './ciencia/ambiente';
+        document.querySelector('.more-ciencia').href = './ciencia/more';
+      }
 </script>
 
 <?php 
