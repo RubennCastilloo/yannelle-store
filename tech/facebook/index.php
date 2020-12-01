@@ -53,9 +53,8 @@
                 </div>
                 <div class="col-md-8 col-sm-8 lineBottom mb-4">
                     <a class="links" href="../../nota.php?id=<?php echo $publicacion['id'] ?>"><h3><?php echo $publicacion['titulo'] ?></h3></a>
-                    <p>Por <a class="autorLink" href=""><?php echo $publicacion['editor'] ?></a> | <?php echo $publicacion['fecha'] ?></p>
+                    <p>Por <a class="autorLink" href=""><?php echo $publicacion['editor'] ?></a> | <?php $fechaNota = explode(',', $publicacion['fecha']); echo fechaMx(strval($publicacion['fecha'])) . ' ' . $fechaNota[1]; ?></p>
                 </div>
-                
 
                 <?php } ?>
 

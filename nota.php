@@ -13,7 +13,7 @@
     
       $respuesta = obtenerPublicacion($id);
       $nota = $respuesta->fetch_assoc();
-    
+
 
 ?>
 
@@ -23,6 +23,25 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Twitter cards -->
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@raivtech" />
+    <meta name="twitter:title" content="<?php echo $nota['titulo'] ?>" />
+    <meta name="twitter:description" content="<?php echo $nota['subtitulo'] ?>" />
+    <meta name="twitter:image" content="./uploads/files/<?php echo ($nota['portada']) ? $nota['portada'] : ''; ?>" />
+
+    <!-- Fin twitter cards -->
+
+    <!-- facebook open graph -->
+
+    <meta property="og:title" content="<?php echo $nota['titulo'] ?>">
+    <meta property="og:description" content="<?php echo $nota['subtitulo'] ?>">
+    <meta property="og:image" content="./uploads/files/<?php echo ($nota['portada']) ? $nota['portada'] : ''; ?>">
+    <meta property="og:url" content="https://yannelle.com/nota.php?id=<?php echo $id; ?>">
+
+    <!-- fin facebook open graph -->
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -143,16 +162,29 @@
 <div class="container notes mt-5 lineBottom">
     <div class="row">
         <div class="col-md-9">
+        
         <?php if($nota !== NULL){ ?>
-            <h1 class="text-left"><?php echo ($nota['titulo']) ? $nota['titulo'] : ''; ?></h1>
-            <h5><?php echo ($nota['subtitulo']) ? $nota['subtitulo'] : ''; ?></h5>
-            <p>Por <a class="autorLink" href=""><?php echo ($nota['editor']) ? $nota['editor'] : ''; ?></a> | <a class="autorLink" href="<?php echo $nota['link_twitter'] ?>" target="_blank">@<?php echo ($nota['twitter']) ? $nota['twitter'] : ''; ?></a> | <?php echo ($nota['fecha']) ? $nota['fecha'] : ''; ?> </p>
+        <div itemscope itemtype="https://schema.org/Article"> <!-- inicio de datos estructurados -->
+            <meta itemprop="mainEntityOfPage" content="True" />
+            <h1 class="text-left" itemprop="headline"><?php echo ($nota['titulo']) ? $nota['titulo'] : ''; ?></h1>
+            <h5 itemprop="description"><?php echo ($nota['subtitulo']) ? $nota['subtitulo'] : ''; ?></h5>
+            <div >
+              <p>Por <a class="autorLink" href="<?php echo $nota['link_twitter'] ?>" target="_blank"> <span itemprop="author"> <?php echo ($nota['editor']) ? $nota['editor'] : ''; ?> </span> </a> | <a class="autorLink" href="<?php echo $nota['link_twitter'] ?>" target="_blank">@<?php echo ($nota['twitter']) ? $nota['twitter'] : ''; ?></a> | <span itemprop="datePublished" content="<?php echo ($nota['fecha']) ? $nota['fecha'] : ''; ?>"><?php $fechaNota = explode(',', $nota['fecha']); echo fechaMx(strval($nota['fecha'])) . ' ' . $fechaNota[1] ? fechaMx(strval($nota['fecha'])) . ' ' . $fechaNota[1] : ''; ?> </span> <span itemprop="dateModified" content="<?php echo ($nota['fecha']) ? $nota['fecha'] : ''; ?>"></span> </p>
+            </div>
+            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" content="Yannelle">
+              <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                <meta itemprop="url" content="https://yannelle.com">
+              </div> 
+              <meta itemprop="name" content="Tutoriales En Linea"></span>
+            </div>
+            
             <div class="picture">
-                <img src="./uploads/files/<?php echo ($nota['portada']) ? $nota['portada'] : ''; ?>" class="h-200 w-100" alt="">
+                <img src="./uploads/files/<?php echo ($nota['portada']) ? $nota['portada'] : ''; ?>" class="h-200 w-100" alt="<?php echo ($nota['portada']) ? $nota['portada'] : ''; ?>" itemprop="image">
             </div>
             <div class="content contenido-nota mt-4" id="contenido">
                 <?php echo htmlspecialchars_decode($nota['contenido']) ? htmlspecialchars_decode($nota['contenido']) : ''; ?>
             </div>
+          </div> <!-- Fin de datos estructurados -->
 
             <?php } else {?>
 
@@ -174,8 +206,8 @@
                             <img src="./uploads/files/<?php echo $publicacion['portada'] ?>" alt="" class="h-200 w-100">
                         </div>
                         <div class="col-md-8 col-sm-8 lineBottom mb-4">
-                            <a class="links" href=""><h3><?php echo $publicacion['titulo'] ?></h3></a>
-                            <p>Por <a class="autorLink" href="<?php echo $publicacion['link_twitter'] ?>" target="_blank"><?php echo $publicacion['editor'] ?></a> | <?php echo $publicacion['fecha'] ?></p>
+                            <a class="links" href="./nota.php?id=<?php echo $publicacion['id'] ?>"><h3><?php echo $publicacion['titulo'] ?></h3></a>
+                            <p>Por <a class="autorLink" href="<?php echo $publicacion['link_twitter'] ?>" target="_blank"><?php echo $publicacion['editor'] ?></a> | <?php echo fechaMx(strval($publicacion['fecha'])) ?></p>
                         </div>
 
                     <?php } 
