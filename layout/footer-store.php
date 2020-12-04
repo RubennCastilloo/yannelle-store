@@ -42,7 +42,7 @@
                   <form>
                     <div class="input-group input-group mb-3">
                         
-                      <label for="form-control" class="text-left"> Suscríbete para enviarte un correos con lo más nuevo en tecnología.</label>
+                      <label for="form-control" class="text-left"> Suscríbete para enviarte los productos más recientes de Yannelle Store.</label>
                       <input type="email" class="form-control form-email" placeholder="correo@correo.com" aria-label="Small">
                     </div>
                     <button class="btn btn-outline-info btn-email"> <i class="fas fa-envelope"></i> Suscribirme</button>

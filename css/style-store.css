@@ -1,0 +1,160 @@
+:root {
+    --primaryColor: #F277BB;
+    --primaryColorRGBA: rgba(226, 28, 122, 1);
+    --secondaryColor: #F2B3DC;
+    --thirdColor: #F2C9E4;
+    --fourthColor: #DFE4F2;
+    --fifthColor: #404040;
+    --sixthColor: #7E424A;
+    --seventhColor: #7E4942;
+    --grayLine: #EAEAEA;
+    --gray: #F0F0F0;
+    --colorGrayText: #525141;
+
+    /* Fonts */
+    --primaryFont: 'Dancing Script', cursive;
+    --secondaryFont: 'Nerko One', cursive;
+    --thirdFont: 'Nunito', sans-serif;
+    --fourthFont: 'Padauk', sans-serif;
+    --fifthFont: 'Raleway', sans-serif;
+    --sixthFont: 'Dosis', sans-serif;
+
+}
+body {
+    font-family: var(--sixthFont);
+    font-size: 1.2em;
+}
+p {
+    font-family: var(--fourthFont);
+}
+
+.icon-redes {
+    color: var(--secondaryColor);
+    font-size: 2.1em;
+    transition: .5s ease-in-out;
+}
+.icon-redes:hover {
+    color: var(--primaryColor);
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(242,119,187,.6);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(242,119,187,.6);
+  outline: 0 none;
+}
+input {
+    border-radius: 15px!important;
+}
+.nav-item a:hover {
+    color: var(--primaryColor)!important;
+}
+.carousel-store img {
+    max-width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 0;
+    padding: 2px;
+}
+.carousel-caption {
+    background-color: rgba(242,119,187,.6);
+    padding: 20px;
+}
+.card-body {
+    color: black;
+}
+.card {
+    margin-top: 20px;
+    overflow:hidden;
+    border-radius: 10px;
+    border-bottom: 10px solid var(--secondaryColor);
+    transition: .5s ease-in-out;
+}
+.card:hover {
+    border-bottom: 10px solid var(--primaryColor);
+}
+.card img {
+    width: auto;
+    height: 200px;
+    transition: .7s ease-in-out;
+}
+.link-categoria {
+    text-decoration: none!important;
+}
+.primaryFont {
+    font-family: var(--fourthFont);
+}
+
+.btn-email {
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    border-radius: 15px;
+    font-size: 1.2em;
+}
+.btn-email:hover {
+    color: white;
+    border: 1px solid var(--primaryColor);
+    background-color: var(--primaryColor);
+}
+
+
+
+
+/* productos */
+
+.price {
+    font-size: 2.3em;
+    color: var(--primaryColor);
+}
+.product-card {
+    margin-top: 20px;
+    border-bottom: 5px solid gray;
+}
+.product-card:hover {
+    border-bottom: 5px solid var(--primaryColor);
+}
+.button-purchase {
+    display: flex;
+    align-items: center;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    border-radius: 15px;
+    font-size: 1.2em;
+}
+.button-purchase:hover {
+    color: white;
+    border: 1px solid var(--primaryColor);
+    background-color: var(--primaryColor);
+}
+.carousel-prouct {
+    max-width: 100%;
+}
+
+.principal-info {
+    background-color: var(--grayLine);
+    padding: 30px;
+    color: black;
+}
+
+.icon-principal {
+    font-size: 3em;
+    color: var(--primaryColor);
+}
+
+.product-card img {
+    height: 300px;
+}

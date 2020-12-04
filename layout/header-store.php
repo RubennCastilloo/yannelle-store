@@ -12,20 +12,23 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Dosis:wght@300&family=Nerko+One&family=Nunito:wght@200;300&family=Padauk:wght@400;700&family=Raleway&display=swap" rel="stylesheet">
 
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- User styles -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style-store.css">
 
 
     <title>Yannelle Store</title>
   </head>
   <body>
 
-  <div class="container">
+  <div class="container pb-0 mb-0 mt-2">
     <h1 class="text-center">Yannelle</h1>
   </div>
   <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white shadow-sm rounded">
@@ -53,19 +56,27 @@
 
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link" href="#" id=""><i class="fas fa-shopping-bag icon-shop"></i> <span>1</span></a>
+            <a class="nav-link" href="#" id="">
+            <div class="row shop-cart">
+            <div class="col-md-6 p-0">
+              <span class="material-icons">
+              shopping_cart
+              </span>
+            </div>
+            <div class="col-md-6 pl-1">
+              <span class="pb-2 cart-numb">0</span>
+            </div>
+            </div>
+            </a>
         </li>
         <li class="nav-item">
-            <div class="btn-group dropleft">
-              <button type="button" class="btn nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user icon-shop"></i>
-              </button>
-              <div class="dropdown-menu">
-                <a href="tech/apple/" class="dropdown-item" ><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
-            </div>
-              </div>
-            </div>
+          <a class="nav-link" href="#" id="">
+            <span class="material-icons">
+            person
+            </span>
+          </a>
         </li>
+        
     </ul>
   </div>
   </div>
