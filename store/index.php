@@ -77,7 +77,7 @@
   <h2 class="text-center mt-3 mb-4 text-uppercase">Productos que ofrecemos</h2>
   <div class="row text-center">
     <div class="col-md-3">
-      <a href="" class="link-categoria">
+      <a href="./tazas/" class="link-categoria">
         <div class="card">
           <img src="./images/taza.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -88,37 +88,38 @@
     </div> <!-- col-md-6 -->
 
     <div class="col-md-3">
-      <a href="" class="link-categoria">
+      <a href="./joyeria/" class="link-categoria">
         <div class="card">
           <img src="./images/anillo.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h2 class="card-text">Joyeria</h2>
+            <h2 class="card-text">Joyería</h2>
           </div>
         </div>
       </a>
     </div> <!-- col-md-6 -->
 
     <div class="col-md-3">
-      <a href="" class="link-categoria">
-        <div class="card">
-          <img src="./images/sueter.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h2 class="card-text">Camisas</h2>
-          </div>
-        </div>
-      </a>
-    </div> <!-- col-md-6 -->
-
-    <div class="col-md-3">
-      <a href="" class="link-categoria">
+      <a href="./tecnologia/" class="link-categoria">
         <div class="card">
           <img src="./images/ssd.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h2 class="card-text">Tecnologia</h2>
+            <h2 class="card-text">Tecnología</h2>
           </div>
         </div>
       </a>
     </div> <!-- col-md-6 -->
+
+    <div class="col-md-3">
+      <a href="./otros/" class="link-categoria">
+        <div class="card">
+          <img src="./images/otros.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h2 class="card-text">Otros artículos</h2>
+          </div>
+        </div>
+      </a>
+    </div> <!-- col-md-6 -->
+
   </div>
 </div>
 
@@ -127,7 +128,7 @@
 <!-- ultimos productos -->
 
 <div class="container-fluid mt-5 mb-5">
-  <h2 class="text-center mt-3 mb-4 text-uppercase">Ultimos lanzamientos</h2>
+  <h2 class="text-center mt-3 mb-4 text-uppercase">Últimos lanzamientos</h2>
   <div class="row">
 
   <div class="col-md-4"> <!-- inicio col-md-3 -->
@@ -135,7 +136,7 @@
         <div class="card product-card">
           <!-- carousel productos -->
 
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
               <div class="carousel-item active carousel-prouct">
                 <img src="../images/play.jpg" class="d-block w-100" alt="...">

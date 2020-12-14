@@ -1,5 +1,5 @@
 <?php 
-  include '../administrator/php/functions.php';
+  include '../../administrator/php/functions.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,7 +21,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- User styles -->
-    <link rel="stylesheet" href="../css/style-store.css">
+    <link rel="stylesheet" href="../../css/style-store.css">
 
 
     <title>Yannelle Store</title>
@@ -42,7 +42,7 @@
   
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a class="nav-link" href="./" id="inicio">INICIO <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../" id="inicio">INICIO <span class="sr-only">(current)</span></a>
         </li>
 
         <li class="nav-item">
@@ -52,6 +52,20 @@
         <li class="nav-item">
             <a class="nav-link noticias" href="../">NOTICIAS</a>
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link noticias" href="../">TAZAS</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link noticias" href="../">JOYERIA</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link noticias" href="../">TECNOLOGIA</a>
+        </li>
+
+        
     </ul>
 
     <ul class="navbar-nav ml-auto">
@@ -98,7 +112,7 @@
   foreach($publicaciones as $publicacion) { ?>
   <div class="publicidad text-center align-items-center justify-content-center">
     <a href="<?php echo $publicacion['link'] ?>" target="_blank">
-      <img src="../uploads/publ/<?php echo $publicacion['imagen'] ?>" class="h-100 w-100" alt="">
+      <img src="../../uploads/publ/<?php echo $publicacion['imagen'] ?>" class="h-100 w-100" alt="">
     </a>
   </div>
   <?php } 
