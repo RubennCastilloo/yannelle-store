@@ -117,7 +117,9 @@
             <?php } 
             } else {
                 ?> 
-                  <h4 class="text-danger">No hay contenido para mostrar</h4>
+                  <div class="container text-center justify-content-center mt-3 mb-3">
+                    <h4 class="text-danger">No hay contenido para mostrar</h4>
+                  </div>
                 <?php
             } ?>
 
