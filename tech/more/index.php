@@ -10,8 +10,10 @@
     $articulos_por_pagina = 10;
     $paginas = ceil($total_registros / $articulos_por_pagina);
 
-    if($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0 ) {
-        header('Location: ?pagina=1');
+    if ($resultado->num_rows) {
+        if($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0 ) {
+            header('Location: ?pagina=1');
+        }
     }
 
   
@@ -21,7 +23,7 @@
 ?>
 
 <div class="container mt-5 lineBottom">
-    <h2 class="text-center"><i class="fas fa-plus"></i> Más Tech</h2>
+    <h2 class="text-center"><i class="fas fa-microchip"></i> Más Tech</h2>
     <p class="text-left mb-5">
         <?php 
         $descripciones = obtenerDescripcionCategoria('tech', 'mas-tech'); 

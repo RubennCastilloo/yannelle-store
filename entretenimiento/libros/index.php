@@ -2,7 +2,7 @@
     if (!$_GET) {
         header('Location: ?pagina=1');
     }
-    
+
 
     include '../../layout-sub/header.php';
     $resultado = obtenerPublicacionesCategorias('entretenimiento', 'libros');
@@ -10,9 +10,12 @@
     $articulos_por_pagina = 10;
     $paginas = ceil($total_registros / $articulos_por_pagina);
 
-    if($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0 ) {
-        header('Location: ?pagina=1');
+    if ($resultado->num_rows) {
+        if($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0 ) {
+            header('Location: ?pagina=1');
+        }
     }
+
 
   
   

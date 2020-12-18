@@ -2,23 +2,19 @@
     if (!$_GET) {
         header('Location: ?pagina=1');
     }
-
     
 
     include '../../layout-sub/header.php';
-    $resultado = obtenerPublicacionesCategorias('ciencia', 'espacio');
+    $resultado = obtenerPublicacionesCategorias('entretenimiento', 'mas-entretenimiento');
     $total_registros = $resultado->num_rows;
     $articulos_por_pagina = 10;
     $paginas = ceil($total_registros / $articulos_por_pagina);
-
 
     if ($resultado->num_rows) {
         if($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0 ) {
             header('Location: ?pagina=1');
         }
     }
-
-    
 
   
   
@@ -27,10 +23,10 @@
 ?>
 
 <div class="container mt-5 lineBottom">
-    <h2 class="text-center"><i class="fas fa-meteor"></i> Espacio</h2>
+    <h2 class="text-center"><i class="fas fa-play"></i> Más Entretenimiento</h2>
     <p class="text-left mb-5">
         <?php 
-        $descripciones = obtenerDescripcionCategoria('ciencia', 'espacio'); 
+        $descripciones = obtenerDescripcionCategoria('entretenimiento', 'mas-entretenimiento'); 
         if($descripciones->num_rows) { 
         foreach($descripciones as $descripcion) { ?>
         <p class="text-left mb-5"><?php echo $descripcion['descripcion'] ?></p>
@@ -50,7 +46,7 @@
     <div class="row">
         <div class="col-md-9">
             <div class="row">
-            <?php $publicaciones = obtenerPublicacionesSubcategoriaPaginadas('ciencia', 'espacio', $iniciar, $articulos_por_pagina); 
+            <?php $publicaciones = obtenerPublicacionesSubcategoriaPaginadas('entretenimiento', 'mas-entretenimiento', $iniciar, $articulos_por_pagina); 
             if($publicaciones->num_rows) { 
             foreach($publicaciones as $publicacion) { ?>
 

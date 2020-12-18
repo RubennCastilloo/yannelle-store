@@ -32,7 +32,7 @@
   <div class="container">
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <i class="fas fa-bars"></i>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -52,7 +52,7 @@
               <a href="#" class="dropdown-item youtube"><i class="fab fa-youtube"></i> YouTube</a>
               <a href="#" class="dropdown-item facebook"><i class="fab fa-facebook-square"></i> Facebook</a>
               <a href="#" class="dropdown-item code"><i class="fas fa-code"></i> Code</a>
-              <a href="#" class="dropdown-item more-tech"><i class="fas fa-plus"></i> Más</a>
+              <a href="#" class="dropdown-item more-tech"><i class="fas fa-plus"></i> Más Tech</a>
             </div>
           </div>
         </li>
@@ -69,6 +69,7 @@
               <a href="#" class="dropdown-item libros"><i class="fas fa-book"></i> Libros</a>
               <a href="#" class="dropdown-item musica"><i class="fas fa-music"></i> Musica</a>
               <a href="#" class="dropdown-item podcast"><i class="fas fa-podcast"></i> Podcast</a>
+              <a href="#" class="dropdown-item more-entretenimiento"><i class="fas fa-plus"></i> Más Entretenimiento</a>
             </div>
           </div>
         </li>
@@ -83,7 +84,7 @@
               <a href="#" class="dropdown-item salud"><i class="fas fa-heartbeat"></i> Salud</button>
               <a href="#" class="dropdown-item energia"><i class="fas fa-plug"></i> Energía</button>
               <a href="#" class="dropdown-item ambiente"><i class="fas fa-leaf"></i> Ambiente</button>
-              <a href="#" class="dropdown-item more-ciencia"><i class="fas fa-atom"></i> Todo Ciencia</a>
+              <a href="#" class="dropdown-item more-ciencia"><i class="fas fa-atom"></i> Más Ciencia</a>
             </div>
           </div>
         </li>
@@ -101,7 +102,7 @@
     var url = location.pathname;
     console.log(url);
 
-    if (url === '/yannelle-store/tech/apple/' || url === '/yannelle-store/tech/amazon/' || url === '/yannelle-store/tech/google/' || url === '/yannelle-store/tech/youtube/' || url === '/yannelle-store/tech/facebook/' || url === '/yannelle-store/tech/code/') {
+    if (url === '/yannelle-store/tech/apple/' || url === '/yannelle-store/tech/amazon/' || url === '/yannelle-store/tech/google/' || url === '/yannelle-store/tech/youtube/' || url === '/yannelle-store/tech/facebook/' || url === '/yannelle-store/tech/code/' || url === '/yannelle-store/tech/more/') {
         document.querySelector('#tech').classList.add('selected');
     }
 </script>
@@ -132,6 +133,7 @@
         document.querySelector('.libros').href = '../../entretenimiento/libros/';
         document.querySelector('.musica').href = '../../entretenimiento/musica/';
         document.querySelector('.podcast').href = '../../entretenimiento/podcast/';
+        document.querySelector('.more-entretenimiento').href = '../../entretenimiento/more/';
 
         // Tecnologia
 
@@ -152,13 +154,14 @@
         document.querySelector('.more-ciencia').href = '../../ciencia/more';
       }
 
-      if(url === '/yannelle-store/entretenimiento/peliculas/' || url === '/yannelle-store/entretenimiento/tv/' || url === '/yannelle-store/entretenimiento/videojuegos/' || url === '/yannelle-store/entretenimiento/libros/' || url === '/yannelle-store/entretenimiento/musica/' || url === '/yannelle-store/entretenimiento/podcast/'){
+      if(url === '/yannelle-store/entretenimiento/peliculas/' || url === '/yannelle-store/entretenimiento/tv/' || url === '/yannelle-store/entretenimiento/videojuegos/' || url === '/yannelle-store/entretenimiento/libros/' || url === '/yannelle-store/entretenimiento/musica/' || url === '/yannelle-store/entretenimiento/podcast/'  || url === '/yannelle-store/entretenimiento/more/'){
         document.querySelector('.peliculas').href = '../peliculas/';
         document.querySelector('.tv').href = '../tv/';
         document.querySelector('.videojuegos').href = '../videojuegos/';
         document.querySelector('.libros').href = '../libros/';
         document.querySelector('.musica').href = '../musica/';
         document.querySelector('.podcast').href = '../podcast/';
+        document.querySelector('.more-entretenimiento').href = '../more/';
 
         // Tecnologia
 
@@ -186,6 +189,7 @@
         document.querySelector('.libros').href = '../../entretenimiento/libros/';
         document.querySelector('.musica').href = '../../entretenimiento/musica/';
         document.querySelector('.podcast').href = '../../entretenimiento/podcast/';
+        document.querySelector('.more-entretenimiento').href = '../../entretenimiento/more/';
 
         // Tecnologia
 

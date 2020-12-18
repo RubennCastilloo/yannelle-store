@@ -329,3 +329,18 @@ blockquote {
     height: 500px;
     max-width: 100%;
 }
+
+/* Naveagacion movil */
+
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.fa-bars {
+    color: var(--primaryColor);
+    font-size: 1.2em;
+}
