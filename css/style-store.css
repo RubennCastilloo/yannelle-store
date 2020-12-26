@@ -52,6 +52,7 @@ input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
+.custom-select:focus,
 .uneditable-input:focus {   
   border-color: rgba(242,119,187,.6);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(242,119,187,.6);
@@ -157,4 +158,67 @@ input {
 
 .product-card img {
     height: 300px;
+}
+
+
+/* Formulario de registro */
+
+.btn-register {
+    border-radius: 20px;
+    color: var(--primaryColor)!important;
+    border: 1px solid var(--primaryColor);
+    padding: 7px;
+    background-color: white;
+}
+.btn-register:hover {
+    border-radius: 20px;
+    background-color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    color: white!important;
+    text-decoration: none!important;
+}
+
+.login-form {
+    background-color: #F8F8F8;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.register-form {
+    background-color: #F8F8F8;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.img-cart {
+    max-width: 90px;
+    max-height: 90px;
+}
+
+.item-title {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.item-short-description {
+    font-weight: lighter;
+}
+.btn-proceder {
+    align-items: center;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    border-radius: 20px;
+    font-size: 1em;
+}
+.btn-proceder:hover {
+    border-radius: 20px;
+    background-color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    color: white!important;
+    text-decoration: none!important;
+}
+.resultado-proceder {
+    color: var(--primaryColor);
+    font-weight: bold;
+    font-size: 1.3em;
 }

@@ -56,7 +56,7 @@
 
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link" href="#" id="">
+            <a class="nav-link" href="./cart" id="">
             <div class="row shop-cart">
             <div class="col-md-6 p-0">
               <span class="material-icons">
@@ -70,7 +70,7 @@
             </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" id="">
+          <a class="nav-link" href="./register" id="">
             <span class="material-icons">
             person
             </span>

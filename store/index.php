@@ -132,7 +132,7 @@
   <div class="row">
 
   <div class="col-md-4"> <!-- inicio col-md-3 -->
-      <a href="" class="link-categoria">
+      <a href="./product" class="link-categoria">
         <div class="card product-card">
           <!-- carousel productos -->
 
@@ -148,14 +148,14 @@
                 <img src="./images/anillo.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            </span>
+            <span class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
-            </a>
+            </span>
           </div>
 
           <!-- fin carousel productos -->
