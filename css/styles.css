@@ -348,3 +348,7 @@ blockquote {
     color: var(--primaryColor);
     font-size: 1.2em;
 }
+
+.bg-black {
+    background-color: black;
+}

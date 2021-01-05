@@ -27,7 +27,7 @@
     <!-- Twitter cards -->
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@raivtech" />
+    <meta name="twitter:site" content="@yannelle" />
     <meta name="twitter:title" content="<?php echo $nota['titulo'] ?>" />
     <meta name="twitter:description" content="<?php echo $nota['subtitulo'] ?>" />
     <meta name="twitter:image" content="./uploads/files/<?php echo ($nota['portada']) ? $nota['portada'] : ''; ?>" />
@@ -60,8 +60,12 @@
   </head>
   <body>
 
-  <div class="container">
-    <h1 class="text-center">Yannelle</h1>
+  <div class="container-fluid">
+    <div class="text-center">
+      <a href="/">
+        <img src="images/logos/logo-rosa.png" alt=""> 
+      </a>
+    </div>
   </div>
   <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white shadow-sm rounded">
   <div class="container">
@@ -173,9 +177,9 @@
             </div>
             <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" content="Yannelle">
               <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                <meta itemprop="url" content="https://yannelle.com">
+                <meta itemprop="url" content="https://yannelle.com/images/logos/logo-rosa.png">
               </div> 
-              <meta itemprop="name" content="Tutoriales En Linea"></span>
+              <meta itemprop="name" content="Yannelle"></span>
             </div>
             
             <div class="picture">

@@ -42,8 +42,12 @@
   </head>
   <body>
 
-  <div class="container">
-    <h1 class="text-center">Yannelle</h1>
+  <div class="container-fluid">
+    <div class="text-center">
+      <a href="/">
+        <img src="../images/logos/logo-rosa.png" alt=""> 
+      </a>
+    </div>
   </div>
   <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white shadow-sm rounded">
   <div class="container">
