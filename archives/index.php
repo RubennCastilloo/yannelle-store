@@ -223,8 +223,43 @@
     </div>
 </div>
 
+
+  <script>
+      var url = window.location.pathname;
+      if(url === '/yannelle-store/archives/'){
+
+        // Entretenimiento
+
+        document.querySelector('.peliculas').href = '../entretenimiento/peliculas/';
+        document.querySelector('.tv').href = '../entretenimiento/tv/';
+        document.querySelector('.videojuegos').href = '../entretenimiento/videojuegos/';
+        document.querySelector('.libros').href = '../entretenimiento/libros/';
+        document.querySelector('.musica').href = '../entretenimiento/musica/';
+        document.querySelector('.podcast').href = '../entretenimiento/podcast/';
+
+        // Tecnologia
+
+        document.querySelector('.apple').href = '../tech/apple/';
+        document.querySelector('.amazon').href = '../tech/amazon/';
+        document.querySelector('.google').href = '../tech/google/';
+        document.querySelector('.youtube').href = '../tech/youtube/';
+        document.querySelector('.facebook').href = '../tech/facebook/';
+        document.querySelector('.code').href = '../tech/code/';
+        document.querySelector('.more-tech').href = '../tech/more/';
+
+        //Ciencia
+
+        document.querySelector('.espacio').href = '../ciencia/espacio';
+        document.querySelector('.salud').href = '../ciencia/salud';
+        document.querySelector('.energia').href = '../ciencia/energia';
+        document.querySelector('.ambiente').href = '../ciencia/ambiente';
+        document.querySelector('.more-ciencia').href = '../ciencia/more';
+      }
+    </script>
+
+
 <footer class="footer-page mt-5">
-  <div class="container pt-3">
+  <div class="container-fluid pt-3">
           <div class="row text-center">
               <div class="col-lg-4 col-12 pb-2">
                 <div class="col text-center text-uppercase">
@@ -267,7 +302,7 @@
                   <form>
                     <div class="input-group input-group mb-3">
                         
-                      <label for="form-control" class="text-left"> Suscríbete para enviarte un correos con lo más nuevo en tecnología.</label>
+                      <label for="form-control" class="text-left"> Suscríbete para enviarte un correo con lo más nuevo en tecnología.</label>
                       <input type="email" class="form-control form-email" placeholder="correo@correo.com" aria-label="Small">
                     </div>
                     <button class="btn btn-outline-info btn-email"> <i class="fas fa-envelope"></i> Suscribirme</button>
@@ -281,54 +316,21 @@
     <div class="row copy-footer">
         <div class="col-md-12">
           <p class="text-center pt-3 pb-0">
-              &copy; Todos los derechos reservados <span class="numero">RAIV Technologies</span> 2020 | Diseño: <a href="mailto:webmasters@raivtech.com" class="mail-footer">webmasters@raivtech.com</a>
+              &copy; Todos los derechos reservados <span class="footer-text">Yannelle</span> 2020 | Diseño: <a href="https://raivtech.com" target="_blank" class="mail-footer">RAIV Technologies</a>
           </p>
         </div>
       </div>
  </div>
   </footer>
 
-  <script>
-      var url = window.location.pathname;
-      if(url === '/yannelle-store/archives/'){
-
-        // Entretenimiento
-
-        document.querySelector('.peliculas').href = '../entretenimiento/peliculas/';
-        document.querySelector('.tv').href = '../entretenimiento/tv/';
-        document.querySelector('.videojuegos').href = '../entretenimiento/videojuegos/';
-        document.querySelector('.libros').href = '../entretenimiento/libros/';
-        document.querySelector('.musica').href = '../entretenimiento/musica/';
-        document.querySelector('.podcast').href = '../entretenimiento/podcast/';
-
-        // Tecnologia
-
-        document.querySelector('.apple').href = '../tech/apple/';
-        document.querySelector('.amazon').href = '../tech/amazon/';
-        document.querySelector('.google').href = '../tech/google/';
-        document.querySelector('.youtube').href = '../tech/youtube/';
-        document.querySelector('.facebook').href = '../tech/facebook/';
-        document.querySelector('.code').href = '../tech/code/';
-        document.querySelector('.more-tech').href = '../tech/more/';
-
-        //Ciencia
-
-        document.querySelector('.espacio').href = '../ciencia/espacio';
-        document.querySelector('.salud').href = '../ciencia/salud';
-        document.querySelector('.energia').href = '../ciencia/energia';
-        document.querySelector('.ambiente').href = '../ciencia/ambiente';
-        document.querySelector('.more-ciencia').href = '../ciencia/more';
-      }
-    </script>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="../js/swiper.js"></script>
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/swiper.js"></script>
+    <script src="../js/mail.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

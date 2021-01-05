@@ -70,7 +70,7 @@
             </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./register" id="">
+          <a class="nav-link" href="./login" id="">
             <span class="material-icons">
             person
             </span>

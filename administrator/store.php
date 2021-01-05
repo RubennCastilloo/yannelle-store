@@ -8,10 +8,10 @@
             <div class="row">
             <div class="col-lg-12">
                                 <div class="card">
-                                    <div class="card-header">Nueva Publicación</div>
+                                    <div class="card-header">Nuevo Producto</div>
                                     <div class="card-body">
                                         <div class="card-title">
-                                            <h3 class="text-center title-2">Crear Nueva Publicación</h3>
+                                            <h3 class="text-center title-2">Subir nuevo producto</h3>
                                         </div>
                                         <hr>
                                         <form>
@@ -21,69 +21,37 @@
                                                     <input id="titulo" type="text" class="form-control">
                                                 </div>
                                                 <div class="form-group has-success col-md-12">
-                                                    <label for="subtitulo" class="control-label mb-1">Subtítulo</label>
-                                                    <input id="subtitulo" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group has-success col-md-12 mb-4">
-                                                    <label for="file-input" class=" form-control-label">Portada</label>
-                                                    <input type="file" id="file-input" class="form-control-file">
-                                                </div>
-                                                <div class="form-group has-success col-md-12 mb-4 subir-archivos">
-                                                    <label for="link-input" class=" form-control-label">Subir Archivos (Obtener link)</label>
-                                                    <input type="file" id="link-input" class="form-control-file">
-
-                                                    <button id="new-publication" type="submit" class="btn btn-sm btn-success btn-block p-2 mt-3">
-                                                        <i class="fa fa-upload fa-lg"></i>&nbsp;
-                                                        <span class="fa-lg">Subir</span>
-                                                    </button>
-
-                                                    <div class="archivos-subidos mt-3">
-                                                        <div class="table-responsive table--no-card m-b-30 text-center">
-                                                            <table class="table table-borderless table-striped table-earning">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>URL</th>
-                                                                        <th>Copiar</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a href="#">https://raivtech.com</a>
-                                                                        </td>
-                                                                        <td>
-                                                                            <button id="add-user" class="btn btn-sm btn-success">
-                                                                                <i class="fa fa-copy"></i> Copiar URL
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="form-group has-success col-md-12">
+                                                <label for="trix-editor">Descripción del producto</label>
                                                     <input id="trix-editor" type="hidden" />
                                                     <trix-editor input="trix-editor" id="contenido"></trix-editor>
                                                 </div>
                                                 <div class="form-group has-success col-md-12">
-                                                    <label for="categoria" class=" form-control-label">Categoría</label>
-                                                        <select id="categoria" class="form-control">
+                                                    <label for="categoria-tienda" class=" form-control-label">Categoría</label>
+                                                        <select id="categoria-tienda" class="form-control">
                                                         <option value="">Seleccionar</option>
-                                                        <option value="1">Tech</option>
-                                                        <option value="2">Entretenimiento</option>
+                                                        <option value="1">Tazas</option>
+                                                        <option value="2">Joyería</option>
+                                                        <option value="3">Tecnología</option>
+                                                        <option value="4">Otros Artículos</option>
                                                         </select>
                                                 </div>
-                                                <div class="form-group has-success col-md-12">
-                                                    <label for="subcategoria" class=" form-control-label">Subcategoría</label>
-                                                        <select id="subcategoria" class="form-control">
-                                                        <option value="">No hay valores</option>
-                                                        </select>
+                                                <div class="form-group has-success col-md-12 mb-4 imagen-1">
+                                                    <label for="file-input" class=" form-control-label">Imagen 1</label>
+                                                    <input type="file" id="file-input" class="form-control-file">
+                                                    <button class="btn btn-outline-success mt-2" id="subir-1"><i class="fas fa-upload"></i> Subir</button>
+                                                </div>
+                                                <div class="form-group has-success col-md-12 mb-4 imagen-2">
+                                                    <label for="file-input" class=" form-control-label">Imagen 2</label>
+                                                    <input type="file" id="file-input2" class="form-control-file">
+                                                    <button class="btn btn-outline-success mt-2" id="subir-2"><i class="fas fa-upload"></i> Subir</button>
+                                                </div>
+                                                <div class="form-group has-success col-md-12 mb-4 imagen-3">
+                                                    <label for="file-input" class=" form-control-label">Imagen 3</label>
+                                                    <input type="file" id="file-input3" class="form-control-file">
+                                                    <button class="btn btn-outline-success mt-2" id="subir-3"><i class="fas fa-upload"></i> Subir</button>
                                                 </div>
                                                 <div class="form-group has-success col-md-12">
-                                                    <button id="new-publication" type="submit" class="btn btn-lg btn-info btn-block">
+                                                    <button id="new-product" type="submit" class="btn btn-lg btn-info btn-block">
                                                         <i class="fa fa-check fa-lg"></i>&nbsp;
                                                         <span>Publicar</span>
                                                     </button>

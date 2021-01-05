@@ -195,10 +195,10 @@
                             <a href="../administrator/descriptions.php">
                             <i class="fas fa-archive"></i>Descripciones</a>
                         </li>
-                        <!-- <li class="has-sub store">
+                        <li class="has-sub store">
                             <a href="../administrator/store.php">
                                 <i class="fas fa-shopping-cart"></i>Tienda</a>
-                        </li> -->
+                        </li>
                         <li class="has-sub list">
                         <a class="js-arrow" href="#">
                             <i class="fas fa-list-ul"></i>Listas</a>

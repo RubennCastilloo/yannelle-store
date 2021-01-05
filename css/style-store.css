@@ -52,13 +52,15 @@ input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
+input:focus,
 .custom-select:focus,
-.uneditable-input:focus {   
+.uneditable-input:focus,
+.form-control:focus {   
   border-color: rgba(242,119,187,.6);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(242,119,187,.6);
-  outline: 0 none;
+  outline: 0 none!important;
 }
-input {
+input, .custom-select, textarea {
     border-radius: 15px!important;
 }
 .nav-item a:hover {
@@ -221,4 +223,19 @@ input {
     color: var(--primaryColor);
     font-weight: bold;
     font-size: 1.3em;
+}
+.lista-datos li {
+    text-decoration: none!important;
+    list-style: none!important;
+}
+.lista-datos li a:hover {
+    color: var(--primaryColor);
+}
+.lista-datos li button:hover {
+    color: var(--primaryColor);
+}
+
+.price {
+    color: var(--primaryColor);
+    font-size: 2em;
 }

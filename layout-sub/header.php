@@ -89,9 +89,9 @@
           </div>
         </li>
 
-        <!-- <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="../../store/">TIENDA</a>
-        </li> -->
+        </li>
     </ul>
   </div>
   </div>

@@ -281,5 +281,5 @@
 </script>
 
 <?php 
-    include './layout-sub/footer.php';
+    include './layout/footer.php';
 ?>

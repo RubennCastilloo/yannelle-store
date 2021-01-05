@@ -44,6 +44,7 @@
 <script src="js/publication.js"></script>
 <script src="js/ads.js"></script>
 <script src="js/descripciones.js"></script>
+<script src="js/store.js"></script>
 
 </body>
 

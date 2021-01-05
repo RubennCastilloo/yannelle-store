@@ -1,238 +1,47 @@
-<?php 
-  include '../layout/header-store.php';
-?>
 
-  <div class="container-fluid carousel-store">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../images/play.jpg" class="d-block w-100 h-0" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="text-left">First slide label</h5>
-          <p class="text-left">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../images/play.jpg" class="d-block w-100 h-0" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../images/play.jpg" class="d-block w-100 h-0" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- User styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+
+    <title>Yannelle Store</title>
+  </head>
+  <body>
+
+  <div class="text-center justify-content-center align-items-center mt-5 mb-5 container">
+    <h1 class="">Pagina web en construcción</h1>
+    <img src="../images/construct.png" alt="" class="w-50 construct-image">
+    <p class="contenido-nota">Lo sentimos, por el momento esta parte del sitio se encuentra en construcción te sugerimos <a href="../">regresar a la página principal</a> para seguir disfrutando de nuestro contenido.</p>
   </div>
-</div> <!-- fin container-->
-
-<!-- informacion principal -->
-
-<div class="container-fluid principal-info mt-5 mb-5">
-  <div class="row text-center">
-    <div class="col-md-4">
-      <span class="material-icons icon-principal">
-      star
-      </span>
-      <h4>Los mejores productos</h4>
-    </div>
-    <div class="col-md-4 middle-text">
-      <span class="material-icons icon-principal">
-      local_shipping
-      </span>
-      <h4>Envios a toda la republica</h4>
-      
-    </div>
-    <div class="col-md-4">
-      <span class="material-icons icon-principal">
-      verified_user
-      </span>
-      <h4>Compras seguras</h4>
-    </div>
-  </div>
-</div>
-
-<!-- fin informacion principal -->
-
-<!-- productos -->
-
-<div class="container-fluid mt-5 mb-5">
-  <h2 class="text-center mt-3 mb-4 text-uppercase">Productos que ofrecemos</h2>
-  <div class="row text-center">
-    <div class="col-md-3">
-      <a href="./tazas/" class="link-categoria">
-        <div class="card">
-          <img src="./images/taza.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h2 class="card-text text">Tazas</h2>
-          </div>
-        </div>
-      </a>
-    </div> <!-- col-md-6 -->
-
-    <div class="col-md-3">
-      <a href="./joyeria/" class="link-categoria">
-        <div class="card">
-          <img src="./images/anillo.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h2 class="card-text">Joyería</h2>
-          </div>
-        </div>
-      </a>
-    </div> <!-- col-md-6 -->
-
-    <div class="col-md-3">
-      <a href="./tecnologia/" class="link-categoria">
-        <div class="card">
-          <img src="./images/ssd.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h2 class="card-text">Tecnología</h2>
-          </div>
-        </div>
-      </a>
-    </div> <!-- col-md-6 -->
-
-    <div class="col-md-3">
-      <a href="./otros/" class="link-categoria">
-        <div class="card">
-          <img src="./images/otros.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h2 class="card-text">Otros artículos</h2>
-          </div>
-        </div>
-      </a>
-    </div> <!-- col-md-6 -->
-
-  </div>
-</div>
-
-<!-- fin productos -->
-
-<!-- ultimos productos -->
-
-<div class="container-fluid mt-5 mb-5">
-  <h2 class="text-center mt-3 mb-4 text-uppercase">Últimos lanzamientos</h2>
-  <div class="row">
-
-  <div class="col-md-4"> <!-- inicio col-md-3 -->
-      <a href="./product" class="link-categoria">
-        <div class="card product-card">
-          <!-- carousel productos -->
-
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
-            <div class="carousel-inner">
-              <div class="carousel-item active carousel-prouct">
-                <img src="../images/play.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item carousel-prouct">
-                <img src="./images/taza.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item carousel-prouct">
-                <img src="./images/anillo.jpg" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <span class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </span>
-            <span class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </span>
-          </div>
-
-          <!-- fin carousel productos -->
-          <div class="card-body">
-            <h2 class="card-text text-center">Taza Yannelle</h2>
-            <p class="price text-center">$500</p>
-            <div class="text-card">
-              <p>Suscríbete ipsum dolor sit amet consectetur adipisicing elit. Modi iste, culpa asperiores fuga aliquid maxime consequatur cumque quis quia autem laborum porro aperiam delectus atque totam blanditiis expedita ducimus debitis.</p>
-            </div>
-            <div class="text-center">
-              <button href="" class="btn btn-outline-success button-purchase">
-                <span class="material-icons">
-                add_shopping_cart
-                </span>  
-                Comprar
-            </button>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div> <!-- col-md-3 -->
-
-    <div class="col-md-4"> <!-- inicio col-md-3 -->
-      <a href="" class="link-categoria">
-        <div class="card product-card">
-          <img src="./images/ssd.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h2 class="card-text text-center">Taza Yannelle</h2>
-            <p class="price text-center">$500</p>
-            <div class="text-card">
-              <p>Suscríbete ipsum dolor sit amet consectetur adipisicing elit. Modi iste, culpa asperiores fuga aliquid maxime consequatur cumque quis quia autem laborum porro aperiam delectus atque totam blanditiis expedita ducimus debitis.</p>
-            </div>
-            <div class="text-center">
-              <button href="" class="btn btn-outline-success button-purchase">
-                <span class="material-icons">
-                add_shopping_cart
-                </span>  
-                Comprar
-            </button>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div> <!-- col-md-3 -->
-
-    <div class="col-md-4"> <!-- inicio col-md-3 -->
-      <a href="" class="link-categoria">
-        <div class="card product-card">
-          <img src="./images/ssd.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h2 class="card-text text-center">Taza Yannelle</h2>
-            <p class="price text-center">$500</p>
-            <div class="text-card">
-              <p>Suscríbete ipsum dolor sit amet consectetur adipisicing elit. Modi iste, culpa asperiores fuga aliquid maxime consequatur cumque quis quia autem laborum porro aperiam delectus atque totam blanditiis expedita ducimus debitis.</p>
-            </div>
-            <div class="text-center">
-              <button href="" class="btn btn-outline-success button-purchase">
-                <span class="material-icons">
-                add_shopping_cart
-                </span>  
-                Comprar
-            </button>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div> <!-- col-md-3 -->
-    
-  </div>
-</div>
-
-<!-- fin ultimos productos -->
 
 
-  <script>
-      $('.carousel').carousel('pause');
-  </script>
-  <?php 
-    include '../layout/footer-store.php';
-  ?>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/swiper.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

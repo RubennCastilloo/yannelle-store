@@ -42,7 +42,7 @@
                   <form>
                     <div class="input-group input-group mb-3">
                         
-                      <label for="form-control" class="text-left"> Suscríbete para enviarte un correos con lo más nuevo en tecnología.</label>
+                      <label for="form-control" class="text-left"> Suscríbete para enviarte un correo con lo más nuevo en tecnología.</label>
                       <input type="email" class="form-control form-email" placeholder="correo@correo.com" aria-label="Small">
                     </div>
                     <button class="btn btn-outline-info btn-email"> <i class="fas fa-envelope"></i> Suscribirme</button>
@@ -56,7 +56,7 @@
     <div class="row copy-footer">
         <div class="col-md-12">
           <p class="text-center pt-3 pb-0">
-              &copy; Todos los derechos reservados <span class="numero">RAIV Technologies</span> 2020 | Diseño: <a href="mailto:webmasters@raivtech.com" class="mail-footer">webmasters@raivtech.com</a>
+              &copy; Todos los derechos reservados <span class="footer-text">Yannelle</span> 2020 | Diseño: <a href="https://raivtech.com" target="_blank" class="mail-footer">RAIV Technologies</a>
           </p>
         </div>
       </div>
@@ -68,9 +68,12 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
-
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/swiper.js"></script>
+    <script src="../../js/mail.js"></script>
+
+  
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
