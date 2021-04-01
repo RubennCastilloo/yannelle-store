@@ -1,5 +1,4 @@
 const btnEmail = document.querySelector('.btn-email');
-console.log('Hola');
 
 eventListeners();
 
